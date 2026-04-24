@@ -1,6 +1,52 @@
 @layout()
 
 <body class="bg-[#12254A]">
-  </body>
+  <nav class="bg-[#12254A] text-white p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+
+      <a href="/" class="flex items-center">
+        <img src="resources\assets\solo_to.png" class="h-20 w-auto object-contain">
+      </a>
+
+      <ul class="flex space-x-6 items-center">
+        <li><a href="#" class="hover:text-blue-300 transition">Home</a></li>
+        <li><a href="#" class="hover:text-blue-300 transition">About us</a></li>
+        <li>
+          <div class="flex items-center justify-center h-16 w-16 border-2 border-blue-400 rounded-full">
+            <button id="menu-button" class="flex items-center focus:outline-none">
+              <img src="resources\assets\menu.png" alt="Usuario">
+            </button>
+
+            <div id="dropdown-menu"
+              class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
+              <div class="py-1">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 border-b">
+                  <span class="font-bold block text-blue-900">Gerardo</span>
+                  <span class="text-xs text-gray-500">Ver perfil</span>
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Configuración</a>
+                <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100">Cerrar Sesión</a>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            // El mismo script de antes para abrir/cerrar
+            const btn = document.getElementById('menu-button');
+            const menu = document.getElementById('dropdown-menu');
+
+            btn.addEventListener('click', (e) => {
+              e.stopPropagation(); // Evita que el evento se propague
+              menu.classList.toggle('hidden');
+            });
+
+            document.addEventListener('click', () => menu.classList.add('hidden'));
+          </script>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+</body>
 
 @end
