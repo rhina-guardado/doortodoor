@@ -7,5 +7,12 @@
 @layer base {
   body {
     @apply bg-[#12254A] text-white;
+    @apply bg-[#4182b4];
+
   }
 }
+
+@layo agencias{
+  @apply bg-[#0D4576]
+}
+
