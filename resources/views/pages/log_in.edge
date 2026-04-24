@@ -1,9 +1,28 @@
+@layout() 
+  
 
 <nav>
-  <div>
-    
-  </div>
+
 </nav>
 
-  <a>ey</a>
+<div class="flex justify-center, text-center">
 
+  <div>
+    <h1 class="bg-#12254A, text-center">Login</h1>
+    @!input({
+        label: "Email",
+        type: "text",
+        name: "email",
+        placeholder: "Your Email"
+        })
+
+        @!input({
+        label: "Password",
+        type: "text",
+        name: "Password",
+        placeholder: "Your Password"
+        })
+  </div>
+
+</div>
+@end
