@@ -1,2 +1,11 @@
 @import "tailwindcss";
 @source "../views";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#12254A] text-white;
+  }
+}
