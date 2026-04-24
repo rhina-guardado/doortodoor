@@ -1,14 +1,12 @@
 @layout() 
   
+<div class="relative">
+<video autoplay loop muted src="/resources/assets/backgroundvideo.mp4" class="bg-cover bg-center"></video>
 
-<nav>
 
-</nav>
-
-<div class="flex justify-center, text-center">
-
-  <div>
-    <h1 class="bg-#12254A, text-center">Login</h1>
+  <div class="absolute top-0 left-1/2 flex-grow m-20 h-[calc(100vh-88px)] flex flex-col pb-5 rounded-lg bg-radial from-[#12254A] via-[#12254A] to-sky-200 to-100%">
+    <h1 class="text-center text-4xl font-bold pb-10 font-header">Login</h1>
+    
     @!input({
         label: "Email",
         type: "text",
