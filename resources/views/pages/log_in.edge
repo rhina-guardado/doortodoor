@@ -1,25 +1,33 @@
-@layout() 
-  
+@layout()
+
 <div class="relative">
-<video autoplay loop muted src="/resources/assets/backgroundvideo.mp4" class="bg-cover bg-center"></video>
+  <video autoplay loop muted src="/resources/assets/backgroundvideo.mp4" class="bg-cover bg-center h-screen"></video>
+  
+  <div
+    class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 py-16 px-8 rounded-4xl bg-white/5 backdrop-filter backdrop-blur-xl bg-opacity-40 border border-white shadow-xl/30 inset-shadow-sm inset-shadow-white/75">
+    <h1 class="text-center text-4xl font-bold pb-10 font-header text-shadow-lg/30 text-shadow-[#4182b4]">Login</h1>
 
-
-  <div class="absolute top-0 left-1/2 flex-grow m-20 h-[calc(100vh-88px)] flex flex-col pb-5 rounded-lg bg-radial from-[#12254A] via-[#12254A] to-sky-200 to-100%">
-    <h1 class="text-center text-4xl font-bold pb-10 font-header">Login</h1>
-    
     @!input({
-        label: "Email",
-        type: "text",
-        name: "email",
-        placeholder: "Your Email"
-        })
+    label: "Email",
+    type: "text",
+    name: "email",
+    placeholder: "Your Email"
+    })
 
-        @!input({
-        label: "Password",
-        type: "text",
-        name: "Password",
-        placeholder: "Your Password"
-        })
+    @!input({
+    label: "Password",
+    type: "text",
+    name: "Password",
+    placeholder: "Your Password"
+    })
+
+    <div>
+      @!button({
+       text: "dfjd"
+      }) 
+      
+    </div>
+  
   </div>
 
 </div>
