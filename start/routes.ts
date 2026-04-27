@@ -23,7 +23,7 @@ router.on('/welcome').render('pages/welcome').as('welcome')
 
 router
   .group(() => {
-    router.get('signup', [controllers.NewAccount, 'create'])
+    router.get('signup', [controllers.NewAccount, 'create']).as('signup')
     router.post('signup', [controllers.NewAccount, 'store'])
 
     router.get('login', [controllers.Session, 'create'])

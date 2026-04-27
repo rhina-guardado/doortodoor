@@ -9,7 +9,7 @@ export type ScannedRoutes = {
     'log_in': { paramsTuple?: []; params?: {} }
     'agencias': { paramsTuple?: []; params?: {} }
     'welcome': { paramsTuple?: []; params?: {} }
-    'new_account.create': { paramsTuple?: []; params?: {} }
+    'signup': { paramsTuple?: []; params?: {} }
     'new_account.store': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
     'session.store': { paramsTuple?: []; params?: {} }
@@ -21,7 +21,7 @@ export type ScannedRoutes = {
     'log_in': { paramsTuple?: []; params?: {} }
     'agencias': { paramsTuple?: []; params?: {} }
     'welcome': { paramsTuple?: []; params?: {} }
-    'new_account.create': { paramsTuple?: []; params?: {} }
+    'signup': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
   }
   HEAD: {
@@ -30,7 +30,7 @@ export type ScannedRoutes = {
     'log_in': { paramsTuple?: []; params?: {} }
     'agencias': { paramsTuple?: []; params?: {} }
     'welcome': { paramsTuple?: []; params?: {} }
-    'new_account.create': { paramsTuple?: []; params?: {} }
+    'signup': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
   }
   POST: {

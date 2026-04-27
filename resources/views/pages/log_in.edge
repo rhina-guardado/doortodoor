@@ -1,7 +1,7 @@
 @layout()
 
 <div class="relative bg-[#12254A]">
-  <video autoplay loop muted src="/resources/assets/video2background.mp4" class="bg-cover bg-center h-screen"></video>
+  <video autoplay loop muted src="/resources/assets/video2background.mp4" class="bg-cover object-cover bg-center h-screen"></video>
 
   <div
     class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 py-16 px-8 rounded-4xl bg-white/5 backdrop-filter backdrop-blur-xl bg-opacity-40 border border-white shadow-xl/30 inset-shadow-sm inset-shadow-white/75">
@@ -21,18 +21,15 @@
     placeholder: "Your Password"
     })
 
-    <div>
-      <a class="pt-4">remember me forgot Password</a>
-    </div>
-
-    <div class="absolute left-1/2 translate-x-10 font-bold pt-8 pb-4">
+    <div class="flex justify-center pt-8 pb-4">
       @!button({
       text: "Login"
       })
     </div>
 
-    <div>
+    <div class="flex justify-center">
       <a>Don't have an account?</a>
+      <a href="register" class="font-bold">Register</a>
     </div>
   </div>
 
