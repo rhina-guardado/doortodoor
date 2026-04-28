@@ -8,7 +8,7 @@
     class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 py-16 px-8 rounded-4xl bg-white/5 backdrop-filter backdrop-blur-xl bg-opacity-40 shadow-xl/30 inset-shadow-sm inset-shadow-white/75">
     <h1 class="text-center pb-8 text-3xl font-bold font-header text-shadow-lg/30 text-shadow-[#4182b4]">Sign up</h1>
 
-    <div class="flex justify-center w-full grid grid-cols-3 gap-2">
+    <div class="flex justify-center w-full grid grid-cols-3 gap-2 pb-4">
       <div class="flex items-center">
         <input id="default-radio-1" type="radio" value="" name="default-radio"
           class="w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none focus:bg-[#2467A2]">
@@ -35,6 +35,18 @@
       label: "Name and last name"
       })
 
+      @!secondinput({
+            type: "text",
+            name: "Name",
+            label: "DUI"
+            })
+
+      @!secondinput({
+      type: "text",
+      name: "Name",
+      label: "Passport"
+      })
+            
       @!secondinput({
       type: "text",
       name: "Name",
