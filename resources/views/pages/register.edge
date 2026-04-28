@@ -1,35 +1,78 @@
-@layout() 
+@layout()
 
- <div>
-  <video autoplay loop muted src="/resources/assets/video2background.mp4" class="bg-cover object-cover bg-center h-screen"></video>
+<div>
+  <video autoplay loop muted src="/resources/assets/video2background.mp4"
+    class="bg-cover object-cover bg-center h-screen"></video>
 
-  <div class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 py-16 px-8 rounded-4xl bg-white/5 backdrop-filter backdrop-blur-xl bg-opacity-40 shadow-xl/30 inset-shadow-sm inset-shadow-white/75">
-    <h1 class="text-center pb-2 text-3xl font-bold font-header text-shadow-lg/30 text-shadow-[#4182b4]">Sign up</h1>
+  <div
+    class="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 py-16 px-8 rounded-4xl bg-white/5 backdrop-filter backdrop-blur-xl bg-opacity-40 shadow-xl/30 inset-shadow-sm inset-shadow-white/75">
+    <h1 class="text-center pb-8 text-3xl font-bold font-header text-shadow-lg/30 text-shadow-[#4182b4]">Sign up</h1>
 
-      <div class="grid gap-y-3">
-        @!secondinput({
-          type: "text",
-          name: "Name",
-          label: "Name and last name"
-        }) 
-      
-        @!secondinput({
-          type: "text",
-          name: "Name",
-          label: "Email"
-        }) 
+    <div class="flex justify-center w-full grid grid-cols-3 gap-2">
+      <div class="flex items-center">
+        <input id="default-radio-1" type="radio" value="" name="default-radio"
+          class="w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none focus:bg-[#2467A2]">
+        <label for="default-radio-1" class="select-none ms-2 text-sm font-medium text-heading">Client</label>
       </div>
+      <div class="flex items-center">
+        <input checked id="default-radio-2" type="radio" value="" name="default-radio"
+          class="w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none focus:bg-[#2467A2]">
+        <label for="default-radio-2" class="select-none ms-2 text-sm font-medium text-heading">Agency</label>
+      </div>
+      <div class="flex items-center">
+        <input checked id="default-radio-2" type="radio" value="" name="default-radio"
+          class="w-4 h-4 text-neutral-primary border-default-medium bg-neutral-secondary-medium rounded-full checked:border-brand focus:ring-2 focus:outline-none focus:ring-brand-subtle border border-default appearance-none focus:bg-[#2467A2]">
+        <label for="default-radio-2" class="select-none ms-2 text-sm font-medium text-heading">Courier</label>
+      </div>
+    </div>
 
-    <div class="pt-5">
+    
+
+    <div class="grid gap-y-4">
+      @!secondinput({
+      type: "text",
+      name: "Name",
+      label: "Name and last name"
+      })
+
+      @!secondinput({
+      type: "text",
+      name: "Name",
+      label: "Email"
+      })
+
+      @!secondinput({
+      type: "text",
+      name: "Name",
+      label: "Password"
+      })
+    </div>
+
+    <div>
+      <a></a>
+    </div>
+
+    <div class="flex items-center justify-center pt-10">
+      <input id="link-checkbox" type="checkbox" value=""
+        class="w-4 h-4 border border-default-medium bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft">
+      <label for="link-checkbox" class="select-none ms-2 text-sm text-heading">I agree with the <a href="#"
+          class="text-fg-brand hover:underline font-medium">terms and conditions</a>.</label>
+    </div>
+
+    <div class="pt-3 pb-4 flex justify-center">
       @!button({
-        text: "Register"
-      }) 
+      text: "Register"
+      })
+    </div>
 
+    <div class="flex justify-center gap-1">
+      <a>Do you have an account?</a>
+      <a href="log_in" class="font-bold">Login</a>
     </div>
 
   </div>
 
- </div> 
+</div>
 
 
 @end
