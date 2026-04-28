@@ -1,52 +1,143 @@
 @layout()
 
-<body class="bg-[#12254A]">
-  <nav class="bg-[#12254A] text-white p-4 shadow-lg">
-    <div class="container mx-auto flex justify-between items-center">
+<div class="relative bg-[#12254A] h-screen w-full overflow-y-auto">
+  <video autoplay loop muted src="/resources/assets/video2background.mp4"
+    class="fixed inset-0 w-full h-full object-cover z-0">
+  </video>
 
-      <a href="/" class="flex items-center">
-        <img src="resources\assets\solo_to.png" class="h-20 w-auto object-contain">
-      </a>
+  <nav class="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-6 bg-transparent">
 
-      <ul class="flex space-x-6 items-center">
-        <li><a href="#" class="hover:text-blue-300 transition">Home</a></li>
-        <li><a href="#" class="hover:text-blue-300 transition">About us</a></li>
-        <li>
-          <div class="flex items-center justify-center h-16 w-16 border-2 border-blue-400 rounded-full">
-            <button id="menu-button" class="flex items-center focus:outline-none">
-              <img src="resources\assets\menu.png" alt="Usuario">
-            </button>
+    <a href="/" class="flex items-center">
+      <img src="resources\assets\solo_to.png" alt="Logo doortodoor"
+        class="h-18 w-auto object-contain hover:scale-105 transition-duration-400">
+    </a>
 
-            <div id="dropdown-menu"
-              class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
-              <div class="py-1">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 border-b">
-                  <span class="font-bold block text-blue-900">Gerardo</span>
-                  <span class="text-xs text-gray-500">Ver perfil</span>
-                </a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Configuración</a>
-                <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100">Cerrar Sesión</a>
-              </div>
-            </div>
-          </div>
+    <div class="relative group">
+      <button
+        class="flex items-center gap-2 text-white bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all active:scale-95">
+        <span class="font-medium">Menú</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
 
-          <script>
-            // El mismo script de antes para abrir/cerrar
-            const btn = document.getElementById('menu-button');
-            const menu = document.getElementById('dropdown-menu');
-
-            btn.addEventListener('click', (e) => {
-              e.stopPropagation(); // Evita que el evento se propague
-              menu.classList.toggle('hidden');
-            });
-
-            document.addEventListener('click', () => menu.classList.add('hidden'));
-          </script>
-        </li>
-      </ul>
-
+      <div
+        class="absolute right-0 mt-3 w-56 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] overflow-hidden py-2 border border-white/20">
+        <a href="todavia no esta"
+          class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Tu
+          perfil</a>
+        <a href="todavia no esta"
+          class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Configuración</a>
+        <div class="h-[1px] bg-slate-200 my-1"></div>
+        <a href="tampoco se puede"
+          class="block px-4 py-2.5 text-sm text-red-600 hover:bg-red-500  hover:text-white transition-colors">Cerrar Sesión</a>
+      </div>
     </div>
   </nav>
-</body>
+
+  <main class="relative z-10 h-screen flex flex-col items-center justify-center text-center px-4">
+    <h1 class="text-white text-7xl md:text-9xl font-extrabold tracking-tighter drop-shadow-2xl font-header">
+      Welcome
+    </h1>
+    <p class="text-white text-xl md:text-3xl mt-6 max-w-2xl font-light tracking-wide italic">
+      Bring a piece of El Salvador to you<span class="font-bold text-[#4182b4]">+</span>
+    </p>
+  </main>
+
+  <section class="relative z-10 py-20 px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-white text-3xl md:text-5xl font-bold tracking-tight drop-shadow-md">
+        With which agency do you wish to send your parcel today?
+      </h2>
+
+    </div>
+  </section>
+
+  <section class="relative z-10 min-h-screen flex flex-col items-center justify-center py-20">
+
+  <div class="relative w-full max-w-6xl px-4 group">
+
+    <button id="previo" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full text-white transition-all opacity-0 group-hover:opacity-100 border border-white/30">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <div id="carousel" class="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth scrollbar-hide px-10">
+
+      <div class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+        <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
+          <img src="resources\assets\facebook.png" alt="Agencia 1" class="max-h-full object-contain">
+        </div>
+        <h3 class="text-white text-2xl font-bold mb-4">Agencia Express</h3>
+        <button class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+      </div>
+
+      <div class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+        <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
+          <img src="resources\assets\facebook.png" alt="Agencia 2" class="max-h-full object-contain">
+        </div>
+        <h3 class="text-white text-2xl font-bold mb-4">Carga Segura</h3>
+        <button class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+      </div>
+
+      <div class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+        <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
+          <img src="resources\assets\facebook.png" alt="Agencia 3" class="max-h-full object-contain">
+        </div>
+        <h3 class="text-white text-2xl font-bold mb-4">Envío Nacional</h3>
+        <button class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+      </div>
+
+      <div class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+        <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
+          <img src="resources\assets\facebook.png" alt="Agencia 3" class="max-h-full object-contain">
+        </div>
+        <h3 class="text-white text-2xl font-bold mb-4">Envío Nacional</h3>
+        <button class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+      </div>
+
+      <div class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+        <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
+          <img src="resources\assets\facebook.png" alt="Agencia 3" class="max-h-full object-contain">
+        </div>
+        <h3 class="text-white text-2xl font-bold mb-4">Envío Nacional</h3>
+        <button class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+      </div>
+
+      <div class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+        <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
+          <img src="resources\assets\facebook.png" alt="Agencia 3" class="max-h-full object-contain">
+        </div>
+        <h3 class="text-white text-2xl font-bold mb-4">Envío Nacional</h3>
+        <button class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+      </div>
+
+    </div>
+
+    <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full text-white transition-all opacity-0 group-hover:opacity-100 border border-white/30">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</section>
+
+</div>
+
+<script>
+  const carousel = document.getElementById('carousel');
+  const prevBtn = document.getElementById('previo');
+  const nextBtn = document.getElementById('nextBtn');
+  const scrollAmount = 400;
+
+  nextBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+</script>
 
 @end
