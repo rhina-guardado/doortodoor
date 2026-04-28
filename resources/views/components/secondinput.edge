@@ -1,0 +1,44 @@
+@let(useOldValue = !['password', 'file', 'checkbox', 'radio'].includes($props.get('type')))
+@let(inputValue = useOldValue ? $context.oldValue || $props.get('value') || '' : $props.get('value') || '')
+@let(classes = [])
+
+<div class="relative w-full">
+
+    <input
+        {{
+            $props
+            .except(['value'])
+            .merge({
+                name: $context.name,
+                id: $context.id,
+                value: inputValue,
+                class: `
+                    peer block w-full appearance-none border-0 border-b-2
+                    border-white/40 bg-transparent px-0 py-3 text-white
+                    focus:border-white focus:outline-none focus:ring-0
+                `,
+                type: 'text',
+                placeholder: ' ',
+                'aria-invalid': $context.hasErrors ? 'true' : false,
+                'data-invalid': $context.hasErrors ? 'true' : false,
+                'autofocus': $context.hasErrors ? 'true' : false,
+                'aria-describedby': $context.hasErrors ? `${$context.id}-error` : '',
+            })
+            .toAttrs()
+        }}
+    />
+
+    <label
+        for="{{ $context.id }}"
+        class="absolute left-0 top-3 origin-[0] text-gray-400 duration-300 transform
+        peer-placeholder-shown:translate-y-0
+        peer-placeholder-shown:scale-100
+        peer-focus:-translate-y-6
+        peer-focus:scale-75
+        peer-focus:text-white
+        -translate-y-6 scale-75"
+    >
+        {{ $props.get('label') || ' ' }}
+    </label>
+
+</div>

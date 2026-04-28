@@ -3,5 +3,5 @@
 @let(classes = [])
 
 <button
-  class="bg-linear-to-r from-[#0D4576] via-[#2467A2] to-[#4182b4] rounded-3xl border-1 border-white text-shadow-lg/40 text-shadow-gray-500 p-2 px-30 self-center font-bold"
+  class="bg-linear-to-r from-[#0D4576] via-[#2467A2] to-[#4182b4] rounded-3xl border-1 border-white text-shadow-lg/40 text-shadow-gray-500 p-2 px-30 self-center text-shadow-lg/30 text-shadow-white/50 text-lg"
   {{ $props.except(['text']).merge({ class: classes }).toAttrs() }}>{{{ buttonText }}}</button>
