@@ -8,13 +8,14 @@
 </head>
 
 <body>
-<div>
-<video autoplay loop muted src="/resources/assets/video2background.mp4" class="bg-cover object-cover bg-center h-screen"></video>
-   <div>
-    <h1 class="text-center py-7 mt-60 font-bold text-4xl">El Salvador is knocking your door</h1>
-    <p class="text-center py-5">Making every delivery feel personal</p>
-  </div>
-  </div>
+    <video autoplay loop muted src="/resources/assets/video2background.mp4"
+      class="fixed top-0 left-0 w-full h-full object-cover z-0"></video>
+
+      <main class="relative z-10 flex flex-col items-center justify-center h-screen text-white px-4 text-center">
+      <h1 class="font-bold text-4xl md:text-4xl drop-shadow-2xl mb-4">El Salvador is knocking your door</h1>
+      <p class="text-lg md:text-2xl opacity-90 drop-shadow-lg">Making every delivery feel personal</p>
+      </main>
+
   <nav class="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-6 bg-transparent">
 
     <a href="/" class="flex items-center">
@@ -22,7 +23,7 @@
         class="h-18 w-auto object-contain hover:scale-105 transition-duration-400">
     </a>
 
-    <p class="text-center mx-6 content-center ">About us</p>
+    <p class="text-center mx-7 content-center">About us</p>
 
     <div class="relative group">
       <button
@@ -42,7 +43,8 @@
           class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Configuración</a>
         <div class="h-[1px] bg-slate-200 my-1"></div>
         <a href="tampoco se puede"
-          class="block px-4 py-2.5 text-sm text-red-600 hover:bg-red-500  hover:text-white transition-colors">Cerrar Sesión</a>
+          class="block px-4 py-2.5 text-sm text-red-600 hover:bg-red-500  hover:text-white transition-colors">Cerrar
+          Sesión</a>
       </div>
     </div>
   </nav>
