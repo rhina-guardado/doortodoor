@@ -1,6 +1,6 @@
 @layout()
 
-<div class="relative bg-[#12254A] h-screen w-full overflow-y-auto">
+<div class="relative bg-[#12254A] min-h-screen w-full overflow-y-auto">
   <video autoplay loop muted src="/resources/assets/video2background.mp4"
     class="fixed inset-0 w-full h-full object-cover z-0">
   </video>
@@ -15,8 +15,8 @@
     <div class="relative group">
       <button
         class="flex items-center gap-2 text-white bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all active:scale-95">
-        <span class="font-medium">Menú</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <span class="font-medium">Menu</span>
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
@@ -24,13 +24,14 @@
       <div
         class="absolute right-0 mt-3 w-56 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] overflow-hidden py-2 border border-white/20">
         <a href="todavia no esta"
-          class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Tu
-          perfil</a>
+          class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Your
+          profile</a>
         <a href="todavia no esta"
-          class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Configuración</a>
+          class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Settings</a>
         <div class="h-[1px] bg-slate-200 my-1"></div>
         <a href="tampoco se puede"
-          class="block px-4 py-2.5 text-sm text-red-600 hover:bg-red-500  hover:text-white transition-colors">Cerrar Sesión</a>
+          class="block px-4 py-2.5 text-sm text-red-600 hover:bg-red-500  hover:text-white transition-colors">Sign
+          out</a>
       </div>
     </div>
   </nav>
@@ -44,90 +45,287 @@
     </p>
   </main>
 
-  <section class="relative z-10 py-20 px-8">
+  <section class="relative z-10 px-8">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-white text-3xl md:text-5xl font-bold tracking-tight drop-shadow-md">
+      <h2
+        class="text-white text-4xl md:text-5xl font-bold tracking-tight drop-shadow-md tracking-tighter drop-shadow-2xl">
         With which agency do you wish to send your parcel today?
       </h2>
-
+      <div class="mt-6 h-1 w-130 bg-[#4182b4] mx-auto rounded-full drop-shadow-[0_0_8px_#4182b4]"></div>
     </div>
-  </section>
 
-  <section class="relative z-10 min-h-screen flex flex-col items-center justify-center py-20">
+</div>
+</section>
+
+<section class="relative z-10 min-h-screen flex flex-col items-center justify-center">
 
   <div class="relative w-full max-w-6xl px-4 group">
 
-    <button id="previo" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full text-white transition-all opacity-0 group-hover:opacity-100 border border-white/30">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <button id="previo"
+      class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full text-white transition-all opacity-0 group-hover:opacity-100 border border-white/30">
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
     </button>
 
     <div id="carrusel" class="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth scrollbar-hide px-10">
 
-      <div class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+      <div
+        class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
         <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
           <img src="resources\assets\fidix.jpg" alt="Agencia 1" class="max-h-full object-contain">
         </div>
-        <h3 class="text-white text-2xl font-bold mb-4">FIDIX</h3>
-        <p class="text-white text-lg font-normal mb-4">Send it through a reliable, established delivery agency with physical offices</p>
-        <button class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+        <h3 class="text-white text-2xl font-bold mb-4 tracking-tighter drop-shadow-2xl">FIDIX</h3>
+        <p class="text-white text-lg font-normal mb-4">Send it through a reliable, established delivery agency with
+          physical offices</p>
+        <button
+          class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
       </div>
 
-      <div class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+      <div
+        class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
         <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
           <img src="resources\assets\cargorapido.jpg" alt="Agencia 2" class="max-h-full object-contain">
         </div>
-        <h3 class="text-white text-2xl font-bold mb-4">Cargo Rápido</h3>
-        <p class="text-white text-lg font-normal mb-4">Send it through a reliable, established delivery agency with physical offices</p>
-        <button class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+        <h3 class="text-white text-2xl font-bold mb-4 tracking-tighter drop-shadow-2xl">Cargo Rápido</h3>
+        <p class="text-white text-lg font-normal mb-4">Send it through a reliable, established delivery agency with
+          physical offices</p>
+        <button
+          class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
       </div>
 
-      <div class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+      <div
+        class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
         <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
           <img src="resources\assets\ay.jpg" alt="Agencia 3" class="max-h-full object-fill">
         </div>
-        <h3 class="text-white text-2xl font-bold mb-4">AY</h3>
-        <p class="text-white text-lg font-normal mb-4">Send it through a reliable, established delivery agency with physical offices</p>
-        <button class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+        <h3 class="text-white text-2xl font-bold mb-4 tracking-tighter drop-shadow-2xl">AY</h3>
+        <p class="text-white text-lg font-normal mb-4">Send it through a reliable, established delivery agency with
+          physical offices</p>
+        <button
+          class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
       </div>
 
-       <div class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+      <div
+        class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
         <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
           <img src="resources\assets\fidix.jpg" alt="Agencia 1" class="max-h-full object-contain">
         </div>
-        <h3 class="text-white text-2xl font-bold mb-4">FIDIX</h3>
-        <p class="text-white text-lg font-normal mb-4">Send it through a reliable, established delivery agency with physical offices</p>
-        <button class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+        <h3 class="text-white text-2xl font-bold mb-4 tracking-tighter drop-shadow-2xl">FIDIX</h3>
+        <p class="text-white text-lg font-normal mb-4">Send it through a reliable, established delivery agency with
+          physical offices</p>
+        <button
+          class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
       </div>
 
-      <div class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+      <div
+        class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
         <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
           <img src="resources\assets\cargorapido.jpg" alt="Agencia 2" class="max-h-full object-contain">
         </div>
-        <h3 class="text-white text-2xl font-bold mb-4">Cargo Rápido</h3>
-        <p class="text-white text-lg font-normal mb-4">Send it through a reliable, established delivery agency with physical offices</p>
-        <button class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+        <h3 class="text-white text-2xl font-bold mb-4 tracking-tighter drop-shadow-2xl">Cargo Rápido</h3>
+        <p class="text-white text-lg font-normal mb-4">Send it through a reliable, established delivery agency with
+          physical offices</p>
+        <button
+          class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
       </div>
 
-      <div class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+      <div
+        class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
         <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
           <img src="resources\assets\ay.jpg" alt="Agencia 3" class="max-h-full oject-contain">
         </div>
-        <h3 class="text-white text-2xl font-bold mb-4">AY</h3>
-        <p class="text-white text-lg font-normal mb-4">Send it through a reliable, established delivery agency with physical offices</p>
-        <button class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+        <h3 class="text-white text-2xl font-bold mb-4 tracking-tighter drop-shadow-2xl">AY</h3>
+        <p class="text-white text-lg font-normal mb-4">Send it through a reliable, established delivery agency with
+          physical offices</p>
+        <button
+          class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
       </div>
 
     </div>
 
-    <button id="next" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full text-white transition-all opacity-0 group-hover:opacity-100 border border-white/30">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <button id="next"
+      class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full text-white transition-all opacity-0 group-hover:opacity-100 border border-white/30">
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>
     </button>
   </div>
 </section>
+
+<section class="relative z-10 px-8">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2
+      class="text-white text-4xl md:text-5xl font-bold tracking-tight drop-shadow-md tracking-tighter drop-shadow-2xl">
+      Advice for importing
+    </h2>
+    <div class="mt-6 h-1 w-130 bg-[#4182b4] mx-auto rounded-full drop-shadow-[0_0_8px_#4182b4]"></div>
+  </div>
+
+  </div>
+</section>
+
+<section class="relative z-10 min-h-screen flex flex-col items-center justify-center">
+
+  <div class="relative w-full max-w-6xl px-4 group">
+
+    <button id="previo"
+      class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full text-white transition-all opacity-0 group-hover:opacity-100 border border-white/30">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <div id="carrusel" class="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth scrollbar-hide px-10">
+
+      <div
+        class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+        <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
+          <img src="resources\assets\human-packing-box-people-work-metaphor-separated-white-40926988.webp"
+            alt="Agencia 1" class="max-h-full object-contain">
+        </div>
+        <h3 class="text-white text-2xl font-bold mb-4 tracking-tighter drop-shadow-2xl text-center">Basis requirements
+          for importing</h3>
+        <button
+          class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+      </div>
+
+      <div
+        class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+        <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
+          <img src="resources\assets\boxes.jpg" alt="Agencia 2" class="max-h-full object-contain">
+        </div>
+        <h3 class="text-white text-2xl font-bold mb-4 tracking-tighter drop-shadow-2xl text-center">Required information
+          to transport a document </h3>
+        <button
+          class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+      </div>
+
+      <div
+        class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+        <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
+          <img src="resources\assets\human-packing-box-people-work-metaphor-separated-white-40926988.webp"
+            alt="Agencia 1" class="max-h-full object-contain">
+        </div>
+        <h3 class="text-white text-2xl font-bold mb-4 tracking-tighter drop-shadow-2xl text-center">Basis requirements
+          for importing</h3>
+        <button
+          class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+      </div>
+
+      <div
+        class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+        <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
+          <img src="resources\assets\boxes.jpg" alt="Agencia 2" class="max-h-full object-contain">
+        </div>
+        <h3 class="text-white text-2xl font-bold mb-4 tracking-tighter drop-shadow-2xl text-center">Required information
+          to transport a document </h3>
+        <button
+          class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+      </div>
+
+      <div
+        class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+        <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
+          <img src="resources\assets\human-packing-box-people-work-metaphor-separated-white-40926988.webp"
+            alt="Agencia 1" class="max-h-full object-contain">
+        </div>
+        <h3 class="text-white text-2xl font-bold mb-4 tracking-tighter drop-shadow-2xl text-center">Basis requirements
+          for importing</h3>
+        <button
+          class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+      </div>
+      <div
+        class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
+        <div class="w-full h-40 bg-white rounded-2xl mb-6 flex items-center justify-center p-4">
+          <img src="resources\assets\boxes.jpg" alt="Agencia 2" class="max-h-full object-contain">
+        </div>
+        <h3 class="text-white text-2xl font-bold mb-4 tracking-tighter drop-shadow-2xl text-center">Required information
+          to transport a document </h3>
+        <button
+          class="w-full py-3 bg-[#4182b4] text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">Seleccionar</button>
+      </div>
+    </div>
+
+    <button id="next"
+      class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full text-white transition-all opacity-0 group-hover:opacity-100 border border-white/30">
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</section>
+
+<footer class="relative z-10 w-full bg-white/5 backdrop-blur-xl border-t border-white/10 pt-12 pb-8 px-8 mt-20">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+      <div class="col-span-1 md:col-span-1">
+        <img src="resources/assets/solo_to.png" alt="Logo" class="h-12 w-auto mb-6 opacity-90">
+        <p class="text-white/60 text-sm leading-relaxed">
+          Connecting El Salvador with the world, one parcel at a time. The most reliable way to bring a piece of home to
+          you.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-6 tracking-wider uppercase text-xs">Quick Links</h4>
+        <ul class="space-y-4">
+          <li><a href=nohay class="text-white/50 hover:text-[#4182b4] transition-colors text-sm">Home</a></li>
+          <li><a href=nohay class="text-white/50 hover:text-[#4182b4] transition-colors text-sm">Agencies</a></li>
+          <li><a href=nohay class="text-white/50 hover:text-[#4182b4] transition-colors text-sm">How it works</a></li>
+          <li><a href=nohay class="text-white/50 hover:text-[#4182b4] transition-colors text-sm">Tracking</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-6 tracking-wider uppercase text-xs">Support</h4>
+        <ul class="space-y-4">
+          <li><a href=nohay class="text-white/50 hover:text-[#4182b4] transition-colors text-sm">Help Center</a></li>
+          <li><a href=nohay class="text-white/50 hover:text-[#4182b4] transition-colors text-sm">Terms of Service</a>
+          </li>
+          <li><a href=nohay class="text-white/50 hover:text-[#4182b4] transition-colors text-sm">Privacy Policy</a></li>
+          <li><a href=nohay class="text-white/50 hover:text-[#4182b4] transition-colors text-sm">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-6 tracking-wider uppercase text-xs">Stay Connected</h4>
+        <div class="flex gap-4">
+          <a href=nohay class="bg-white/10 p-2 rounded-lg hover:bg-[#4182b4] transition-all text-white">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/>
+          </svg>
+          </a>
+          <a href=nohay class="bg-white/10 p-2 rounded-lg hover:bg-[#4182b4] transition-all text-white">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+          <a href=nohay class="bg-white/10 p-2 rounded-lg hover:bg-[#4182b4] transition-all text-white">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-white/30 text-xs text-center md:text-left">
+        &copy; 2026 Door to Door El Salvador. All rights reserved.
+      </p>
+      <div class="flex items-center gap-6">
+        <span class="text-white/30 text-xs flex items-center gap-2 italic">
+          <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+          Systems Operational
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </div>
 
