@@ -76,3 +76,6 @@
     font-style: italic;
   }
   
+  p, small {
+    font-weight: 500;
+  }
