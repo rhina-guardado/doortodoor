@@ -169,14 +169,14 @@
 
   <div class="relative w-full max-w-6xl px-4 group">
 
-    <button id="previo"
+   <button id="previo2"
       class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full text-white transition-all opacity-0 group-hover:opacity-100 border border-white/30">
-      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
     </button>
 
-    <div id="carrusel" class="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth scrollbar-hide px-10">
+    <div id="carrusel2" class="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth scrollbar-hide px-10">
 
       <div
         class="min-w-[300px] md:min-w-[380px] snap-center bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col items-center hover:bg-white/20 transition-all">
@@ -247,7 +247,7 @@
       </div>
     </div>
 
-    <button id="next"
+    <button id="next2"
       class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-md p-3 rounded-full text-white transition-all opacity-0 group-hover:opacity-100 border border-white/30">
       <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -341,6 +341,21 @@
 
   previo.addEventListener('click', () => {
     carrusel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+</script>
+
+<script>
+  const carrusel2 = document.getElementById('carrusel2');
+  const previo2 = document.getElementById('previo2');
+  const next2 = document.getElementById('next2');
+  const scrollAmount = 400;
+
+  next2.addEventListener('click', () => {
+    carrusel2.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  previo2.addEventListener('click', () => {
+    carrusel2.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
   });
 </script>
 
