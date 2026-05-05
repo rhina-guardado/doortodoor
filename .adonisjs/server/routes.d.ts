@@ -12,6 +12,11 @@ export type ScannedRoutes = {
     'chat': { paramsTuple?: []; params?: {} }
     'profile': { paramsTuple?: []; params?: {} }
     'AY': { paramsTuple?: []; params?: {} }
+    'ConectExpress': { paramsTuple?: []; params?: {} }
+    'GlobalBox': { paramsTuple?: []; params?: {} }
+    'Fidix': { paramsTuple?: []; params?: {} }
+    'CargoRapido': { paramsTuple?: []; params?: {} }
+    'Enviomundo': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'new_account.store': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
@@ -27,6 +32,11 @@ export type ScannedRoutes = {
     'chat': { paramsTuple?: []; params?: {} }
     'profile': { paramsTuple?: []; params?: {} }
     'AY': { paramsTuple?: []; params?: {} }
+    'ConectExpress': { paramsTuple?: []; params?: {} }
+    'GlobalBox': { paramsTuple?: []; params?: {} }
+    'Fidix': { paramsTuple?: []; params?: {} }
+    'CargoRapido': { paramsTuple?: []; params?: {} }
+    'Enviomundo': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
   }
@@ -39,6 +49,11 @@ export type ScannedRoutes = {
     'chat': { paramsTuple?: []; params?: {} }
     'profile': { paramsTuple?: []; params?: {} }
     'AY': { paramsTuple?: []; params?: {} }
+    'ConectExpress': { paramsTuple?: []; params?: {} }
+    'GlobalBox': { paramsTuple?: []; params?: {} }
+    'Fidix': { paramsTuple?: []; params?: {} }
+    'CargoRapido': { paramsTuple?: []; params?: {} }
+    'Enviomundo': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
   }

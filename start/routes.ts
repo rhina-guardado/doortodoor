@@ -19,6 +19,12 @@ router.on('/welcome').render('pages/welcome').as('welcome')
 router.on('/chat').render('pages/chat').as('chat')
 router.on('/profile').render('pages/profile').as('profile')
 router.on('/AY').render('pages/AY').as('AY')
+router.on('/ConectExpress').render('pages/ConectExpress').as('ConectExpress')
+router.on('/GlobalBox').render('pages/GlobalBox').as('GlobalBox')
+router.on('/Fidix').render('pages/Fidix').as('Fidix')
+router.on('/CargoRapido').render('pages/CargoRapido').as('CargoRapido')
+router.on('/Enviomundo').render('pages/Enviomundo').as('Enviomundo')
+
 
 router
   .group(() => {
