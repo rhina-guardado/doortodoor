@@ -1,294 +1,397 @@
 @layout()
 
-<div class="bg-[#0D4576] rounded-md mx-24 mt-4 ">
-
-  <div class=" flex flex-col items-center justify-center ">
+<div class="rounded-lg mx-16 ">
 
 
-    <p class="text-center text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] text-4xl font-semibold px-46 py-4">
-      With which agency do you wish to send your parcel today?
-    </p>
+  <div class="relative min-h-screen w-full overflow-y-auto">
+    <video autoplay loop muted src="/resources/assets/video2background.mp4"
+      class="fixed inset-0 w-full h-full object-cover -z-10">
+    </video>
 
-    <div class=" flex justify-self-center h-1 w-100 bg-linear-to-r from-[#787880] to-[#4182B4]"></div>
-  </div>
+    <nav
+      class="top-0 left-0 w-full z-50  flex justify-between items-center px-8 py-6 bg-gradient-to-r from-[#12254A]/20 via-[#0D4576]/20 to-[#12254A]/20 mb-26">
+
+      <a href="/" class="flex items-center">
+        <img src="resources\assets\solo_to.png" alt="Logo doortodoor"
+          class="h-18 w-auto rounded-full hover:scale-105 transition-duration-400 object-cover shadow-[0_10px_8px_0_rgba(0,0,0,0.3)]">
+      </a>
+
+      <a href="home.com" target="_blank"
+        class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">Home</a>
+      <a href="about_us.com" target="_blank"
+        class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">About us</a>
+
+      <div class="relative group">
+        <button
+          class="flex items-center cursor-pointer gap-2 text-white bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all active:scale-95">
+          <span class="font-medium">Menu</span>
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <div
+          class="absolute right-0 mt-3 w-56 bg-white/70 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] overflow-hidden py-2 border border-white/20">
+          <a href="todavia no esta"
+            class="block px-4 py-2.5 text-sm font-medium text-slate-800 hover:bg-[#0D4576] hover:text-white transition-colors">Your
+            profile</a>
+          <a href="todavia no esta"
+            class="block px-4 py-2.5 text-sm text-slate-800 font-medium hover:bg-[#0D4576]  hover:text-white transition-colors">Settings</a>
+          <div class="h-[1px] bg-slate-200 my-1"></div>
+          <a href="tampoco se puede"
+            class="block px-4 py-2.5 text-sm font-medium text-[#12254A] hover:bg-[#12254A] hover:text-white transition-colors">Sign
+            out</a>
+        </div>
+      </div>
+    </nav>
 
 
 
-  <div class=" mt-10 py-1 flex flex-col items-center ">
-    <input class="p-2 my-6 rounded-full w-182 from-[#787880] bg-[#787880]/60 focus:outline-none " placeholder="Search">
-
-    <button class="border rounded-full w-38 h-10 bg-[#4182B4] m-4 bg-linear-to-r from-[#0D4576] to-[#4182B4]">
-      <p class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff]">Compare</p>
-    </button>
 
 
-  </div>
+    <div class=" flex flex-col items-center justify-center ">
 
 
-
-  <div class="flex flex-col items-center justify-center border p-12">
-
-    <div class="flex flex-row flex-wrap justify-center gap-6 border p-4">
-
+      <p
+        class="text-center text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] text-5xl font-semibold pointer-events-none px-22 mx-14 py-4">
+        With which agency do you wish to send your parcel today?
+      </p>
 
       <div
-        class="flex flex-col items-center border p-4 shadow-[0_0_15px_15px_rgba(0, 0, 0, 1)] border-sky-600 hover:shadow-[0_0_25px_10px_rgba(6,182,212,0.5)] rounded-xl bg-[#083D8A] w-80 shadow-lg">
+        class=" flex justify-self-center h-1 w-100 bg-linear-to-r from-[#4182B4] to-[#0D4576] drop-shadow-[0_0_8px_#4182b4]">
+      </div>
+    </div>
 
-        <div class="relative">
-          <img src="resources/assets/microsoft.png" class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl ">
 
-          <div class="absolute top-1 right-1">
-            <button class=" border border-black  ">
-              <span class="material-symbols-outlined text-black">favorite</span>
-              <span class="material-icons text-black">favorite</span>
-            </button>
+
+    <div class="mt-10 py-1 flex flex-col items-center ">
+      <div class="relative">
+        <div>
+
+          <input
+            class=" p-2 my-6 border border-[#49494C]/30 rounded-full w-182 bg-[#787880]/60 focus:outline-none text-black font-medium px-12 "
+            placeholder="Search">
+        </div>
+        <div class="absolute top-8 left-2">
+          <button>
+            <span class="material-symbols-outlined text-black">search</span>
+          </button>
+        </div>
+
+        <div class="absolute top-8 right-2 transition-transform hover:scale-105">
+          <button>
+            <span class="material-symbols-outlined text-black cursor-pointer">mic</span>
+          </button>
+        </div>
+
+      </div>
+
+
+      <button
+        class="border-x border-b rounded-full w-38 h-10 bg-[#4182B4] m-4 bg-linear-to-r from-[#0D4576] to-[#4182B4]">
+        <p class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] cursor-pointer">
+          Compare</p>
+      </button>
+
+
+    </div>
+
+
+
+    <div class="flex flex-col items-center justify-center p-12">
+
+      <div class="flex flex-row flex-wrap justify-center gap-16 p-4">
+
+
+        <div
+          class="flex flex-col items-center border p-4 shadow-[0_0_15px_15px_rgba(0, 0, 0, 1)] border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92]  transition-transform hover:scale-102 rounded-xl bg-[#083D8A] w-80 shadow-lg">
+
+          <div class="relative">
+            <img src="resources/assets/globalbox.png"
+              class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl ">
+
+            <div class="absolute top-2 right-3 transition-transform hover:scale-120">
+              <button>
+                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
+              </button>
+            </div>
           </div>
+
+
+          <h1 class="text-center text-white font-bold text-2xl text-shadow-lg/20">GlobalBox Express</h1>
+          <p class="text-center text-white text-sm my-4">Send it through established and reliable agencies with physical
+            offices.</p>
+
+
+          <div
+            class="flex flex-col gap-1 items-center text-white border border-white/20 rounded-xl p-4 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-60">
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Real-time tracking</p>
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Insurance included</p>
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Physical offices</p>
+          </div>
+
+          <button
+            class="border rounded-full  w-42 h-10  bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:bg-gradient-to-r hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 m-4">
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff]">Select agency</p>
+          </button>
         </div>
 
-
-        <h1 class="text-center text-white font-bold text-2xl text-shadow-lg/20">GlobalBox Express</h1>
-        <p class="text-center text-white text-sm my-4">Send it through established and reliable agencies with physical
-          offices.</p>
 
 
         <div
-          class="flex flex-col gap-1 items-center text-white border border-white/20 rounded-xl p-4 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-60">
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Real-time tracking</p>
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Insurance included</p>
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Physical offices</p>
+          class="flex flex-col items-center border p-4 shadow-[0_0_15px_15px_rgba(0, 0, 0, 1)] border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92]  transition-transform hover:scale-102 rounded-xl bg-[#083D8A] w-80 shadow-lg">
+
+          <div class="relative">
+            <img src="resources/assets/fidix.png" class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl ">
+
+            <div class="absolute top-2 right-3 transition-transform hover:scale-120">
+              <button>
+                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
+              </button>
+            </div>
+          </div>
+
+
+          <h1 class="text-center text-white font-bold text-2xl text-shadow-lg/20">FIDIX</h1>
+          <p class="text-center text-white text-sm my-4">Send it through established and reliable agencies with physical
+            offices.</p>
+
+
+          <div
+            class="flex flex-col gap-1 items-center text-white border border-white/20 rounded-xl p-4 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-60">
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Real-time tracking</p>
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Insurance included</p>
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Physical offices</p>
+          </div>
+
+          <button
+            class="border rounded-full w-42 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:bg-gradient-to-r hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 m-4">
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff]">Select agency</p>
+          </button>
         </div>
 
-        <button class="border rounded-full w-42 h-10 bg-[#4182B4] m-4">
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff]">Select agency</p>
-        </button>
-      </div>
 
-
-
-      <div class="flex flex-col items-center p-4 rounded-xl bg-[#083D8A] w-80 shadow-lg">
-        <img src="resources/assets/microsoft.png" class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
-
-        <h1 class="text-center text-white font-bold text-2xl text-shadow-lg/20">GlobalBox Express</h1>
-        <p class="text-center text-white text-sm my-4">Send it through established and reliable agencies with physical
-          offices.</p>
 
         <div
-          class="flex flex-col gap-1 items-center text-white border border-white/20 rounded-xl p-4 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-60">
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Real-time tracking</p>
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Insurance included</p>
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Physical offices</p>
+          class="flex flex-col items-center border p-4 shadow-[0_0_15px_15px_rgba(0, 0, 0, 1)] border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92]  transition-transform hover:scale-102 rounded-xl bg-[#083D8A] w-80 shadow-lg">
+
+          <div class="relative">
+            <img src="resources/assets/ay.png" class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl ">
+
+            <div class="absolute top-2 right-3 transition-transform hover:scale-120">
+              <button>
+                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
+              </button>
+            </div>
+          </div>
+
+
+          <h1 class="text-center text-white font-bold text-2xl text-shadow-lg/20">AY</h1>
+          <p class="text-center text-white text-sm my-4">Send it through established and reliable agencies with physical
+            offices.</p>
+
+
+          <div
+            class="flex flex-col gap-1 items-center text-white border border-white/20 rounded-xl p-4 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-60">
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Real-time tracking</p>
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Insurance included</p>
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Physical offices</p>
+          </div>
+
+          <button
+            class="border rounded-full w-42 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:bg-gradient-to-r hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 m-4">
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff]">Select agency</p>
+          </button>
         </div>
 
-        <button class="border rounded-full w-42 h-10 bg-[#4182B4] m-4">
-          <p class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] ">Select agency</p>
-        </button>
-
-      </div>
 
 
-      <div class="flex flex-col items-center p-4 rounded-xl bg-[#083D8A] w-80 shadow-lg">
-        <img src="resources/assets/microsoft.png" class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
 
-        <h1 class="text-center text-white font-bold text-2xl text-shadow-lg/20">GlobalBox Express</h1>
-        <p class="text-center text-white text-sm my-4">Send it through established and reliable agencies with physical
-          offices.</p>
 
         <div
-          class="flex flex-col gap-1 items-center text-white border border-white/20 rounded-xl p-4 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-60">
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Real-time tracking</p>
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Insurance included</p>
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Physical offices</p>
+          class="flex flex-col items-center border p-4 shadow-[0_0_15px_15px_rgba(0, 0, 0, 1)] border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92]  transition-transform hover:scale-102 rounded-xl bg-[#083D8A] w-80 shadow-lg">
+
+          <div class="relative">
+            <img src="resources/assets/conectexpress.png"
+              class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl ">
+
+            <div class="absolute top-2 right-3 transition-transform hover:scale-120">
+              <button>
+                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
+              </button>
+            </div>
+          </div>
+
+
+          <h1 class="text-center text-white font-bold text-2xl text-shadow-lg/20">ConectExpress</h1>
+          <p class="text-center text-white text-sm my-4">Send it through established and reliable agencies with physical
+            offices.</p>
+
+
+          <div
+            class="flex flex-col gap-1 items-center text-white border border-white/20 rounded-xl p-4 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-60">
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Real-time tracking</p>
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Insurance included</p>
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Physical offices</p>
+          </div>
+
+          <button
+            class="border rounded-full w-42 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:bg-gradient-to-r hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 m-4">
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff]">Select agency</p>
+          </button>
         </div>
 
-        <button class="border rounded-full w-42 h-10 bg-[#4182B4] m-4">
-          <p class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] ">Select agency</p>
-        </button>
-
-      </div>
 
 
 
-      <div class="flex flex-col items-center p-4 rounded-xl bg-[#083D8A] w-80 shadow-lg">
-        <img src="resources/assets/microsoft.png" class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
 
-        <h1 class="text-center text-white font-bold text-2xl text-shadow-lg/20">GlobalBox Express</h1>
-        <p class="text-center text-white text-sm my-4">Send it through established and reliable agencies with physical
-          offices.</p>
 
         <div
-          class="flex flex-col gap-1 items-center text-white border border-white/20 rounded-xl p-4 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-60">
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Real-time tracking</p>
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Insurance included</p>
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Physical offices</p>
+          class="flex flex-col items-center border p-4 shadow-[0_0_15px_15px_rgba(0, 0, 0, 1)] border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92]  transition-transform hover:scale-102 rounded-xl bg-[#083D8A] w-80 shadow-lg">
+
+          <div class="relative">
+            <img src="resources/assets/cargorapido.png"
+              class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl ">
+
+            <div class="absolute top-2 right-3 transition-transform hover:scale-120">
+              <button>
+                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
+              </button>
+            </div>
+          </div>
+
+
+          <h1 class="text-center text-white font-bold text-2xl text-shadow-lg/20">Cargo Rápido</h1>
+          <p class="text-center text-white text-sm my-4">Send it through established and reliable agencies with physical
+            offices.</p>
+
+
+          <div
+            class="flex flex-col gap-1 items-center text-white border border-white/20 rounded-xl p-4 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-60">
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Real-time tracking</p>
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Insurance included</p>
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Physical offices</p>
+          </div>
+
+          <button
+            class="border rounded-full w-42 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:bg-gradient-to-r hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 m-4">
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff]">Select agency</p>
+          </button>
         </div>
-
-        <button class="border rounded-full w-42 h-10 bg-[#4182B4] m-4">
-          <p class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] ">Select agency</p>
-        </button>
-
-      </div>
-
-
-
-
-      <div class="flex flex-col items-center p-4 rounded-xl bg-[#083D8A] w-80 shadow-lg">
-        <img src="resources/assets/microsoft.png" class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
-
-        <h1 class="text-center text-white font-bold text-2xl text-shadow-lg/20">GlobalBox Express</h1>
-        <p class="text-center text-white text-sm my-4">Send it through established and reliable agencies with physical
-          offices.</p>
 
         <div
-          class="flex flex-col gap-1 items-center text-white border border-white/20 rounded-xl p-4 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-60">
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Real-time tracking</p>
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Insurance included</p>
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Physical offices</p>
+          class="flex flex-col items-center border p-4 shadow-[0_0_15px_15px_rgba(0, 0, 0, 1)] border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92]  transition-transform hover:scale-102 rounded-xl bg-[#083D8A] w-80 shadow-lg">
+
+          <div class="relative">
+            <img src="resources/assets/enviomundo.png"
+              class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl ">
+
+            <div class="absolute top-2 right-3 transition-transform hover:scale-120">
+              <button>
+                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
+              </button>
+            </div>
+          </div>
+
+
+          <h1 class="text-center text-white font-bold text-2xl text-shadow-lg/20">Envío Mundo</h1>
+          <p class="text-center text-white text-sm my-4">Send it through established and reliable agencies with physical
+            offices.</p>
+
+
+          <div
+            class="flex flex-col gap-1 items-center text-white border border-white/20 rounded-xl p-4 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-60">
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Real-time tracking</p>
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Insurance included</p>
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Physical offices</p>
+          </div>
+
+          <button
+            class="border rounded-full w-42 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:bg-gradient-to-r hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 m-4">
+            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff]">Select agency</p>
+          </button>
         </div>
 
-        <button class="border rounded-full w-42 h-10 bg-[#4182B4] m-4">
-          <p class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] ">Select agency</p>
-        </button>
+
+
+
+
 
       </div>
-
-
-
-
-
-      <div class="flex flex-col items-center p-4 rounded-xl bg-[#083D8A] w-80 shadow-lg">
-        <img src="resources/assets/microsoft.png" class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
-
-        <h1 class="text-center text-white font-bold text-2xl text-shadow-lg/20">GlobalBox Express</h1>
-        <p class="text-center text-white text-sm my-4">Send it through established and reliable agencies with physical
-          offices.</p>
-
-        <div
-          class="flex flex-col gap-1 items-center text-white border border-white/20 rounded-xl p-4 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-60">
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Real-time tracking</p>
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Insurance included</p>
-          <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Physical offices</p>
-        </div>
-
-
-        <button class="border rounded-full w-42 h-10 bg-[#4182B4] m-4">
-          <p class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] ">Select agency</p>
-        </button>
-
-      </div>
-
-
-
-
-
-
     </div>
   </div>
 
 
 
 
-  <footer class=" flex flex-row border border-sky-600  bg-blue-700  -mx-24"> 77
+  <footer
+    class="relative z-10 -mx-16 flex flex-row items-center justify-around bg-gradient-to-r from-[#12254A]/70 via-[#0D4576]/30 to-[#12254A]/70">
 
-
-    <div class="mx-30">
-
+    <div class="flex-shrink-0">
       <img src="resources/assets/solo_to.png"
-        class="h-52 w-52 rounded-[50%] shadow-[0_10px_10px_0_rgba(0,0,0,0.3)] my-6 object-contain ">
+        class="h-48 w-48 rounded-full  my-6 object-cover shadow-[0_10px_10px_0_rgba(0,0,0,0.3)]">
     </div>
 
-
-    <div class="flex flex-row border p-2 m-4">
-
+    <div class="flex flex-row items-start gap-16 p-2">
 
 
-
-
-
-
-
-      <div class="flex flex-col items-center gap-3 ">
-        <p class=" px-12 pb-8 font-bold text-lg text-shadow-lg/20 ">Our Team </p>
-
-        <a href="about_us.com" target="_blank" class="hover:underline">
-          <p>About Us</p>
-        </a>
-        <a href="privacy_policy.com" target="_blank" class="hover:underline">
-          <p>Privacy Policy</p>
-        </a>
-        <a href="contact_us.com" target="_blank" class="hover:underline">
-          <p>Contact Us</p>
-        </a>
-
-
-
-      </div>
-
-      <div class="flex flex-col items-center gap-3 mx-27">
-        <p class="px-22 pb-8 font-bold text-lg text-shadow-lg/20">Agencias </p>
-        <div class="flex flex-row gap-10">
-          <div class="flex flex-col justify-items-center text-center gap-3">
-            <a href="fidix.com" target="_blank" class="hover:underline">
-              <p>FIDIX</p>
-            </a>
-            <a href="envíomundo.com" target="_blank" class="hover:underline">
-              <p>EnvíoMundo</p>
-            </a>
-            <a href="ay.com" target="_blank" class="hover:underline">
-              <p>AY</p>
-            </a>
-          </div>
-
-          <div class="flex flex-col text-center gap-3">
-            <a href="cargorápido.com" target="_blank" class="hover:underline">
-              <p>CargoRápido</p>
-            </a>
-            <a href="connectexpress" target="_blank" class="hover:underline">
-              <p>ConnectExpress</p>
-            </a>
-            <a href="globalbox_xpress.com" target="_blank" class="hover:underline">
-              <p>GlobalBox Express</p>
-            </a>
-          </div>
-
+      <div class="flex flex-col items-center gap-3">
+        <p class="pb-4 font-bold text-lg text-white text-shadow-lg/20">Our Team</p>
+        <div class="flex flex-col items-center gap-2 text-white">
+          <a href="about_us.com" target="_blank"
+            class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">About Us</a>
+          <a href="privacy_policy.com" target="_blank"
+            class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">Privacy Policy</a>
+          <a href="contact_us.com" target="_blank"
+            class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">Contact Us</a>
         </div>
       </div>
 
 
-
-
-
-      <div flex flex-row items-center gap-3>
-        <p class="px-12 pb-8 font-bold text-lg text-shadow-lg/20">Follow US </p>
-
-        <div class="flex flex-row">
-          <a href="facebook.com" target="_blank">
-            <img src="resources/assets/facebook.png" class="h-12 w-12">
-          </a>
-          <a href="instagram.com" target="_blank" class="px-2">
-            <img src="resources/assets/insta.png" class="h-12 w-12">
-          </a>
-          <a href="twitter.com" target="_blank">
-            <img src="resources/assets/twitter.png" class="h-12 w-12">
-          </a>
-
-
-
+      <div class="flex flex-col items-center gap-3">
+        <p class="pb-4 font-bold text-lg text-white text-shadow-lg/20 ">Agencias</p>
+        <div class="flex flex-row gap-10 text-white">
+          <div class="flex flex-col text-center gap-2">
+            <a href="fidix.com" target="_blank"
+              class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">FIDIX</a>
+            <a href="envíomundo.com" target="_blank"
+              class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">EnvíoMundo</a>
+            <a href="ay.com" target="_blank"
+              class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">AY</a>
+          </div>
+          <div class="flex flex-col text-center gap-2">
+            <a href="cargorápido.com" target="_blank"
+              class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">CargoRápido</a>
+            <a href="connectexpress" target="_blank"
+              class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">ConnectExpress</a>
+            <a href="globalbox_xpress.com" target="_blank"
+              class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">GlobalBox
+              Express</a>
+          </div>
         </div>
-
-
       </div>
 
 
-
-
+      <div class="flex flex-col items-center gap-3">
+        <p class="pb-4 font-bold text-lg text-white text-shadow-lg/20">Follow Us</p>
+        <div class="flex flex-row gap-4">
+          <a href="facebook.com" target="_blank" class="transition-transform hover:scale-110">
+            <img src="resources/assets/facebook.png" class="h-10 w-10">
+          </a>
+          <a href="instagram.com" target="_blank" class="transition-transform hover:scale-110">
+            <img src="resources/assets/insta.png" class="h-10 w-10">
+          </a>
+          <a href="twitter.com" target="_blank" class="transition-transform hover:scale-110">
+            <img src="resources/assets/twitter.png" class="h-10 w-10">
+          </a>
+        </div>
+      </div>
 
     </div>
-
   </footer>
 
 
 
 
 
-</div>
-@end
+  @end
