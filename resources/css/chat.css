@@ -1,0 +1,18 @@
+/* chat.css */
+
+/* Scrollbar más limpio */
+#chatArea::-webkit-scrollbar {
+  width: 6px;
+}
+#chatArea::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+#chatArea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Animación suave al enviar mensajes */
+#chatArea div {
+  transition: all 0.3s ease-in-out;
+}
