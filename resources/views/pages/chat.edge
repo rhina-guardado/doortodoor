@@ -7,9 +7,46 @@
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="chat.css">
 </head>
-<body class="bg-gray-100 font-sans">
+
+<nav
+      class="top-0 left-0 w-full z-50  flex justify-between items-center px-8 py-6 bg-gradient-to-right from-[#12254A]/20 via-[#0D4576]/20 to-[#12254A]/20 mb-26">
+
+      <a href="/" class="flex items-center">
+        <img src="resources\assets\solo_to.png" alt="Logo doortodoor"
+          class="h-12 w-12 rounded-full hover:scale-105 transition-duration-400 object-cover shadow-[0_10px_8px_0_rgba(0,0,0,0.3)]">
+      </a>
+
+      <a href="home.com" target="_blank"
+        class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">Home</a>
+
+
+      <div class="relative group">
+        <button
+          class="flex items-center cursor-pointer gap-2 text-white bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all active:scale-95">
+          <span class="font-medium">Menu</span>
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <div
+          class="absolute right-0 mt-3 w-56 bg-white/70 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] overflow-hidden py-2 border border-white/20">
+          <a href="todavia no esta"
+            class="block px-4 py-2.5 text-sm font-medium text-slate-800 hover:bg-[#0D4576] hover:text-white transition-colors">Your
+            profile</a>
+          <a href="todavia no esta"
+            class="block px-4 py-2.5 text-sm text-slate-800 font-medium hover:bg-[#0D4576]  hover:text-white transition-colors">Settings</a>
+          <div class="h-[1px] bg-slate-200 my-1"></div>
+          <a href="tampoco se puede"
+            class="block px-4 py-2.5 text-sm font-medium text-[#12254A] hover:bg-[#12254A] hover:text-white transition-colors">Sign
+            out</a>
+        </div>
+      </div>
+    </nav>
+
+<body class="font-sans">
   <section class="h-screen flex p-6">
-    
+
     <!-- Sidebar contactos -->
     <div class="bg-blue-200 w-3/12 p-6 rounded-3xl shadow-lg flex flex-col">
       <h3 class="text-2xl mb-6 font-semibold">ChatDoor</h3>
@@ -40,7 +77,7 @@
 
     <!-- Área de conversación -->
     <div class="flex-1 bg-white ml-4 rounded-3xl shadow-sm border border-gray-300 flex flex-col">
-      
+
       <!-- Encabezado -->
       <div class="p-4 border-b border-gray-200 flex items-center">
         <img src="resources\assets\cargorapido.png" class="w-10 h-10 rounded-full mr-3">
@@ -134,4 +171,6 @@
 
 
 </body>
+
 </html>
+
