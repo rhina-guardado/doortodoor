@@ -17,6 +17,7 @@ export type ScannedRoutes = {
     'Fidix': { paramsTuple?: []; params?: {} }
     'CargoRapido': { paramsTuple?: []; params?: {} }
     'Enviomundo': { paramsTuple?: []; params?: {} }
+    'comparator': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'new_account.store': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
@@ -38,7 +39,6 @@ export type ScannedRoutes = {
     'CargoRapido': { paramsTuple?: []; params?: {} }
     'Enviomundo': { paramsTuple?: []; params?: {} }
     'comparator': { paramsTuple?: []; params?: {} }
-    'comparador': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
   }
@@ -57,7 +57,6 @@ export type ScannedRoutes = {
     'CargoRapido': { paramsTuple?: []; params?: {} }
     'Enviomundo': { paramsTuple?: []; params?: {} }
     'comparator': { paramsTuple?: []; params?: {} }
-    'comparador': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
   }
