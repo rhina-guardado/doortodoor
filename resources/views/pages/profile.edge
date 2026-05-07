@@ -1,55 +1,41 @@
 @layout()
 
+@!navbar() 
 
-<nav class="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-6 bg-transparent">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
-    <a href="/" class="flex items-center">
-        <img src="resources\assets\solo_to.png" alt="Logo doortodoor"
-            class="h-18 w-auto object-contain hover:scale-105 transition-duration-400">
-    </a>
+    <div class="flex justify-center items-center pt-30 lg:pt-35">
 
-    <p class="text-center mx-7 content-center">About us</p>
+        <div class="
+        flex justify-center items-center rounded-full bg-blue-400/30
 
-    <div class="relative group">
-        <button
-            class="flex items-center gap-2 text-white bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all active:scale-95">
-            <span class="font-medium">Menú</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
+        w-[190px] h-[190px]
+        sm:w-[240px] sm:h-[240px]
+        md:w-[320px] md:h-[320px]
+        lg:w-[550px] lg:h-[550px]
+    ">
 
-        <div
-            class="absolute right-0 mt-3 w-56 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] overflow-hidden py-2 border border-white/20">
-            <a href="todavia no esta"
-                class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Tu
-                perfil</a>
-            <a href="todavia no esta"
-                class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Configuración</a>
-            <div class="h-[1px] bg-slate-200 my-1"></div>
-            <a href="tampoco se puede"
-                class="block px-4 py-2.5 text-sm text-red-600 hover:bg-red-500  hover:text-white transition-colors">Cerrar
-                Sesión</a>
+            <img src="/resources/assets/boxes.jpg" class="
+                rounded-full object-cover
+
+                w-[120px] h-[120px]
+                sm:w-[160px] sm:h-[160px]
+                md:w-[220px] md:h-[220px]
+                lg:w-[300px] lg:h-[300px]
+            ">
+
         </div>
-    </div>
-</nav>
 
-
-<div class="grid grid-cols-2 gap-4 grid-flow-col gap-4">
-
-    <div class="fixed row-span-3 row-start-2">
-        <div class="flex justify-center items-center rounded-full bg-blue-400/30 h-[calc(100vh)] w-[calc(100vh)]">
-            <img src="/resources/assets/boxes.jpg" class="rounded-full w-[300px] h-[300px] translate-x-1/4">
-        </div>
     </div>
 
-    <div class="col-start-2 flex justify-center items-center pt-35 grid gap-4">
-        <h1 class="text-center text-6xl font-bold font-header text-shadow-lg/30 text-shadow-[#4182b4]">Hello there!</h1>
+    <div class="lg:col-start-2 flex justify-center items-center pt-10 lg:pt-35 grid">
+        <h1
+            class="text-center text-4xl sm:text-5xl m:text-6xl font-bold font-header text-shadow-lg/30 text-shadow-[#4182b4]">
+            Hello there!</h1>
         <h2 class="text-center text-2xl font-bold font-header text-shadow-lg/30 text-shadow-[#4182b4]">This is your
             profile</h2>
 
-        <div class="py-8 px-14 rounded-4xl bg-white/5 backdrop-filter backdrop-blur-xl bg-opacity-40 grid gap-2">
+        <div class="py-10 px-14 rounded-4xl bg-white/5 backdrop-filter backdrop-blur-xl bg-opacity-40 grid gap-2">
             <h3 class="text-xl font-bold font-header"> Sandra Guadalupe Mendez</h3>
             <p class="font-bold text-fg-brand font-medium text-blue-600/100 dark:text-sky-400/100">@Sandrita08</p>
 
@@ -92,15 +78,17 @@
                 <p>Salvadorenia en USA, q extrania las quesadillas</p>
             </div>
 
-            <button
-                class="cursor-pointer bg-[#2467A2] rounded-xl border-1 border-white/50 p-2 px-3 text-lg"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-pencil-icon lucide-pencil">
-                    <path
-                        d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
-                    <path d="m15 5 4 4" />
-                </svg>Edit Profile</button>
+            <div class="flex justify-center mt-6">
+                <button
+                    class="cursor-pointer bg-[#2467A2] rounded-xl border-1 border-white/50 p-2 px-4 text-lg flex items-center gap-2 text-base"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-pencil-icon lucide-pencil">
+                        <path
+                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
+                        <path d="m15 5 4 4" />
+                    </svg>Edit Profile</button>
+            </div>
 
         </div>
     </div>
