@@ -24,6 +24,7 @@ router.on('/GlobalBox').render('pages/GlobalBox').as('GlobalBox')
 router.on('/Fidix').render('pages/Fidix').as('Fidix')
 router.on('/CargoRapido').render('pages/CargoRapido').as('CargoRapido')
 router.on('/Enviomundo').render('pages/Enviomundo').as('Enviomundo')
+router.on('/comparador').render('pages/comparador').as('comparador')
 
 
 router
