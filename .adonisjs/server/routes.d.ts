@@ -10,6 +10,7 @@ export type ScannedRoutes = {
     'agencias': { paramsTuple?: []; params?: {} }
     'welcome': { paramsTuple?: []; params?: {} }
     'chat': { paramsTuple?: []; params?: {} }
+    'track': { paramsTuple?: []; params?: {} }
     'profile': { paramsTuple?: []; params?: {} }
     'AY': { paramsTuple?: []; params?: {} }
     'ConectExpress': { paramsTuple?: []; params?: {} }
@@ -32,6 +33,7 @@ export type ScannedRoutes = {
     'agencias': { paramsTuple?: []; params?: {} }
     'welcome': { paramsTuple?: []; params?: {} }
     'chat': { paramsTuple?: []; params?: {} }
+    'track': { paramsTuple?: []; params?: {} }
     'profile': { paramsTuple?: []; params?: {} }
     'AY': { paramsTuple?: []; params?: {} }
     'ConectExpress': { paramsTuple?: []; params?: {} }
@@ -51,6 +53,7 @@ export type ScannedRoutes = {
     'agencias': { paramsTuple?: []; params?: {} }
     'welcome': { paramsTuple?: []; params?: {} }
     'chat': { paramsTuple?: []; params?: {} }
+    'track': { paramsTuple?: []; params?: {} }
     'profile': { paramsTuple?: []; params?: {} }
     'AY': { paramsTuple?: []; params?: {} }
     'ConectExpress': { paramsTuple?: []; params?: {} }

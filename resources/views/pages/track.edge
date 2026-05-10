@@ -1,0 +1,136 @@
+@layout()
+
+<div class="rounded-lg ">
+
+
+  <div class="relative min-h-screen w-full overflow-y-auto">
+    <video autoplay loop muted src="/resources/assets/video2background.mp4"
+      class="fixed inset-0 w-full h-full object-cover -z-10">
+    </video>
+
+    <nav
+      class="top-0 left-0 w-full z-50  flex justify-between items-center px-8 py-6 bg-gradient-to-r from-[#12254A]/20 via-[#0D4576]/20 to-[#12254A]/20 ">
+
+      <a href="/" class="flex items-center">
+        <img src="resources\assets\solo_to.png" alt="Logo doortodoor"
+          class="h-18 w-auto rounded-full hover:scale-105 transition-duration-400 object-cover shadow-[0_10px_8px_0_rgba(0,0,0,0.3)]">
+      </a>
+
+      <a href="home.com" target="_blank"
+        class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">Home</a>
+    
+
+      <div class="relative group">
+        <button
+          class="flex items-center cursor-pointer gap-2 text-white bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all active:scale-95">
+          <span class="font-medium">Menu</span>
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <div
+          class="absolute right-0 mt-3 w-56 bg-white/70 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] overflow-hidden py-2 border border-white/20">
+          <a href="todavia no esta"
+            class="block px-4 py-2.5 text-sm font-medium text-slate-800 hover:bg-[#0D4576] hover:text-white transition-colors">Your
+            profile</a>
+          <a href="todavia no esta"
+            class="block px-4 py-2.5 text-sm text-slate-800 font-medium hover:bg-[#0D4576]  hover:text-white transition-colors">Settings</a>
+          <div class="h-[1px] bg-slate-200 my-1"></div>
+          <a href="tampoco se puede"
+            class="block px-4 py-2.5 text-sm font-medium text-[#12254A] hover:bg-[#12254A] hover:text-white transition-colors">Sign
+            out</a>
+        </div>
+      </div>
+    </nav>
+
+
+
+<div class="min-h-screen text-white font-sans p-4 gap-8 flex items-center justify-center mx-16">
+  
+ 
+    
+    <div class="w-full md:w-1/3 p-8 flex flex-col justify-between border-r border-[#4182b4]/40">
+      
+      <div>
+        <h1 class="text-4xl font-bold leading-tight mb-6">
+          Keep your package <br>
+          <span class="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">safe at all times!</span>
+        </h1>
+
+        <div class="flex gap-2 mb-10">
+          <input class="flex-1 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer focus:outline-none transition-all duration-300 rounded-full px-4 py-2 text-sm" placeholder=" #D2D-987654321">
+          </input>
+          <button class="rounded-full border px-4 py-2  bg-gradient-to-b from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:bg-gradient-to-b hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300">
+            Cancel
+          </button>
+        </div>
+
+        <div class="space-y-8 relative">
+          <div class="absolute left-[7px] top-2 bottom-2 w-[2px] bg-gradient-to-b from-[#2467A2] via-[#0D4576] to-[#4182b4]"></div>
+
+          <div class="flex items-start gap-4 relative">
+            <div class="w-4 h-4 rounded-full bg-[#0D4576] mt-1.5 z-10"></div>
+            <div>
+              <p class="text-gray-400 text-xs uppercase tracking-wider font-semibold">Carrier contact</p>
+              <p class="text-lg font-bold text-white">+1 4355 9980</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 relative">
+            <div class="w-4 h-4 rounded-full bg-[#2467A2] border border-[#2467A2] mt-1.5 z-10"></div>
+            <div>
+              <p class="text-gray-400 text-xs uppercase tracking-wider font-semibold">Shipping route</p>
+              <p class="text-lg font-bold text-white leading-tight">Kingston, New York 12401.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 relative">
+            <div class="w-4 h-4 rounded-full bg-[#4182b4] mt-1.5 z-10"></div>
+            <div>
+              <p class="text-gray-400 text-xs uppercase tracking-wider font-semibold">Tracking number</p>
+              <p class="text-lg font-mono ttext-white">12401</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="mt-6 text-[#4182b4] text-xs hover:underline transition-all">
+          See 3 more updates
+        </button>
+      </div>
+
+      <button class="w-full mt-10 py-4 rounded-full border bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:bg-gradient-to-r hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 tracking-widest">
+        <a href="http://localhost:3333/chat">CHAT WITH CARRIER</a>
+      </button>
+    </div>
+
+    <div class="w-full relative h-140 ">
+      <div class="absolute inset-0 contrast-[2]">
+          <img src="resources/assets/map.png" class="w-full h-full">
+      </div>
+      
+      <div class="absolute top-10 left-6 bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
+          <span class="text-2xl font-bold">San Francisco</span>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </div>
+@end
