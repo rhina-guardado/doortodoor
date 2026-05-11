@@ -19,4 +19,4 @@ Alpine.data('alert', function () {
 
 Alpine.start()
 
-
+import "./gsap.js"

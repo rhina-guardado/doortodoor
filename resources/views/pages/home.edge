@@ -1,55 +1,164 @@
 @layout()
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>DoorToDoor</title>
-</head>
+<style>
 
-<body>
-    <video autoplay loop muted src="/resources/assets/video2background.mp4"
-      class="fixed top-0 left-0 w-full h-full object-cover z-0"></video>
+  #avion {
+    position: fixed;
+    z-index: 5;
+    pointer-events: none;
+    width: 80px;
+    filter: drop-shadow(0 0 8px rgba(65, 130, 180, 0.6));
+  }
 
-      <main class="relative z-10 flex flex-col items-center justify-center h-screen text-white px-4 text-center">
-      <h1 class="font-bold text-4xl md:text-4xl drop-shadow-2xl mb-4">El Salvador is knocking your door</h1>
-      <p class="text-lg md:text-2xl opacity-90 drop-shadow-lg">Making every delivery feel personal</p>
-      </main>
+  .cajita {
+    position: fixed;
+    z-index: 4;
+    pointer-events: none;
+    font-size: 28px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+  }
+
+  .landing-titulo {
+    background: linear-gradient(90deg,
+      #ffffff 0%,
+      #ffffff 35%,
+      #4182b4 48%,
+      #DFEEF3 52%,
+      #ffffff 65%,
+      #ffffff 100%);
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+
+  .landing-linea {
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, transparent, #4182b4, #DFEEF3, #4182b4, transparent);
+    box-shadow: 0 0 12px #4182b4;
+    margin: 0 auto;
+    border-radius: 999px;
+  }
+
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    opacity: 0;
+  }
+
+  .scroll-indicator span {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .scroll-arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid rgba(255,255,255,0.4);
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    transform: rotate(45deg);
+    animation: scrollBounce 1.5s infinite;
+  }
+
+  @keyframes scrollBounce {
+    0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.4; }
+    50% { transform: rotate(45deg) translateY(6px); opacity: 1; }
+  }
+
+
+  .estela {
+    position: fixed;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(65, 130, 180, 0.4));
+    pointer-events: none;
+    z-index: 4;
+    border-radius: 999px;
+  }
+</style>
+
+<div id="avion">
+  <svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+    <!-- Cuerpo principal -->
+    <ellipse cx="50" cy="32" rx="38" ry="10" fill="#DFEEF3" opacity="0.95"/>
+    <!-- Nariz -->
+    <path d="M88 32 Q100 32 88 28 L88 36 Z" fill="#4182b4"/>
+    <!-- Cola -->
+    <path d="M12 32 Q5 20 18 22 L22 30 Z" fill="#4182b4"/>
+    <path d="M12 32 Q5 44 18 42 L22 34 Z" fill="#2467A2"/>
+    <!-- Ala superior -->
+    <path d="M55 28 Q65 10 80 14 L75 28 Z" fill="#4182b4" opacity="0.9"/>
+    <!-- Ventanitas -->
+    <circle cx="65" cy="30" r="3" fill="#12254A" opacity="0.6"/>
+    <circle cx="55" cy="30" r="3" fill="#12254A" opacity="0.6"/>
+    <circle cx="75" cy="30" r="3" fill="#12254A" opacity="0.6"/>
+    <!-- Línea de fuselaje -->
+    <line x1="15" y1="32" x2="88" y2="32" stroke="#4182b4" stroke-width="0.5" opacity="0.3"/>
+  </svg>
+</div>
+
+<div class="relative bg-[#12254A] min-h-screen w-full overflow-x-hidden">
+  <video autoplay loop muted src="/resources/assets/video2background.mp4"
+    class="fixed top-0 left-0 w-full h-full object-cover z-0">
+  </video>
+
+  <div class="fixed inset-0 z-[1] bg-[#12254A]/20 pointer-events-none"></div>
 
   <nav class="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-6 bg-transparent">
-
     <a href="/" class="flex items-center">
-      <img src="resources\assets\solo_to.png" alt="Logo doortodoor"
-        class="h-18 w-auto object-contain hover:scale-105 transition-duration-400">
+      <img src="resources/assets/solo_to.png" alt="Logo doortodoor"
+        id="landing-logo"
+        class="h-18 w-auto object-contain hover:scale-105 transition-all duration-300">
     </a>
 
-
-
-    <div class="relative group">
+    <div class="relative group" style="z-index:9999">
       <button
         class="flex items-center gap-2 text-white bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all active:scale-95">
         <span class="font-medium">Menú</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
 
       <div
-        class="absolute right-0 mt-3 w-56 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] overflow-hidden py-2 border border-white/20">
-        <a href="todavia no esta"
-          class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Tu
-          perfil</a>
-        <a href="todavia no esta"
-          class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Configuración</a>
+        class="absolute right-0 mt-3 w-56 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999] overflow-hidden py-2 border border-white/20">
+        <a href="#" class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Tu perfil</a>
+        <a href="#" class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Configuración</a>
         <div class="h-[1px] bg-slate-200 my-1"></div>
-        <a href="tampoco se puede"
-          class="block px-4 py-2.5 text-sm text-red-600 hover:bg-red-500  hover:text-white transition-colors">Cerrar
-          Sesión</a>
+        <a href="#" class="block px-4 py-2.5 text-sm text-red-600 hover:bg-red-500 hover:text-white transition-colors">Cerrar Sesión</a>
       </div>
     </div>
   </nav>
 
-</body>
+  <main class="relative z-10 flex flex-col items-center justify-center h-screen text-white px-4 text-center">
 
-</html>
+    <h1 id="landing-titulo" class="landing-titulo font-bold text-5xl md:text-5xl drop-shadow-2xl mb-6 max-w-4xl leading-tight">
+      El Salvador is knocking your door
+    </h1>
+
+    <div class="landing-linea mb-8" id="landing-linea"></div>
+
+    <p id="landing-sub" class="text-lg md:text-2xl opacity-0 drop-shadow-lg font-light tracking-wide max-w-xl">
+      Making every delivery feel <span class="font-bold text-[#4182b4]">personal</span>
+    </p>
+
+    <div class="scroll-indicator" id="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+
+  </main>
+
+</div>
+
 @end

@@ -27,6 +27,7 @@ router.on('/CargoRapido').render('pages/CargoRapido').as('CargoRapido')
 router.on('/Enviomundo').render('pages/Enviomundo').as('Enviomundo')
 router.on('/comparator').render('pages/comparator').as('comparator')
 router.on('/courierprofile').render('pages/courierprofile').as('courierprofile')
+router.on('/suscription').render('pages/suscription').as('suscription')
 
 router
   .group(() => {

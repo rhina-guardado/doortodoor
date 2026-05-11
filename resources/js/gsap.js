@@ -1,0 +1,366 @@
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
+
+// ============ AGENCIAS ============
+if (document.querySelector(".titulo-principal")) {
+    const titulo = document.querySelector(".titulo-principal")
+    const texto = titulo.innerText
+    titulo.innerHTML = texto
+        .split("")
+        .map(char => `<span class="letra" style="display:inline-block">${char === " " ? "&nbsp;" : char}</span>`)
+        .join("")
+
+    gsap.from(".letra", {
+        duration: 0.6,
+        opacity: 0,
+        y: -20,
+        rotationX: 90,
+        stagger: 0.03,
+        ease: "back.out(1.7)"
+    })
+}
+
+if (document.querySelector(".linea-deco")) {
+    gsap.from(".linea-deco", {
+        duration: 1.5,
+        scaleX: 0,
+        ease: "power3.out",
+        delay: 0.4
+    })
+}
+
+if (document.querySelector(".agency-card")) {
+    gsap.from(".agency-card", {
+        duration: 0.7,
+        opacity: 0,
+        y: 60,
+        stagger: 0.15,
+        ease: "power2.out",
+        delay: 0.3
+    })
+}
+
+// ============ COMPARADOR ============
+if (document.querySelector(".comp-titulo")) {
+    gsap.from(".comp-titulo", {
+        duration: 1,
+        opacity: 0,
+        y: -30,
+        ease: "power3.out"
+    })
+
+    gsap.fromTo(".comp-card-left",
+        { opacity: 0, x: -80 },
+        { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.4 }
+    )
+
+    gsap.fromTo(".comp-card-right",
+        { opacity: 0, x: 80 },
+        { opacity: 1, x: 0, duration: 0.9, ease: "power3.out", delay: 0.4 }
+    )
+
+    gsap.fromTo(".comp-labels",
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 0.7 }
+    )
+
+    gsap.fromTo(".comp-row",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: "power2.out", delay: 0.9 }
+    )
+}
+
+// ============ PUPUSAS ============
+document.querySelectorAll(".btn-pupusa").forEach(button => {
+    button.addEventListener("click", (e) => {
+        const pupusas = ["🫓", "🫓", "🫓", "🌽", "🧀"]
+        for (let i = 0; i < 12; i++) {
+            const emoji = document.createElement("span")
+            emoji.textContent = pupusas[Math.floor(Math.random() * pupusas.length)]
+            emoji.style.cssText = `
+        position: fixed;
+        font-size: ${Math.random() * 30 + 20}px;
+        left: ${e.clientX}px;
+        top: ${e.clientY}px;
+        pointer-events: none;
+        z-index: 9999;
+      `
+            document.body.appendChild(emoji)
+            gsap.to(emoji, {
+                x: (Math.random() - 0.5) * 400,
+                y: (Math.random() - 1.5) * 300,
+                opacity: 0,
+                rotation: Math.random() * 360,
+                duration: Math.random() * 1 + 0.8,
+                ease: "power2.out",
+                onComplete: () => emoji.remove()
+            })
+        }
+    })
+})
+
+// ============ HOME ============
+if (document.querySelector(".home-welcome")) {
+
+    // Subtítulo fade in
+    gsap.from(".home-sub", {
+        duration: 1.2,
+        opacity: 0,
+        y: 20,
+        ease: "power2.out",
+        delay: 0.5
+    })
+
+    // Títulos de sección al hacer scroll
+    gsap.utils.toArray(".home-section-title").forEach(title => {
+        const texto = title.innerText
+        title.innerHTML = texto
+            .split("")
+            .map(char => `<span class="home-letra" style="display:inline-block">${char === " " ? "&nbsp;" : char}</span>`)
+            .join("")
+
+        gsap.from(title.querySelectorAll(".home-letra"), {
+            scrollTrigger: {
+                trigger: title,
+                start: "top 85%",
+            },
+            duration: 0.5,
+            opacity: 0,
+            y: -20,
+            rotationX: 90,
+            stagger: 0.03,
+            ease: "back.out(1.7)"
+        })
+    })
+
+    // Cards del carrusel al hacer scroll
+    gsap.utils.toArray(".home-card").forEach(card => {
+        gsap.fromTo(card,
+            { opacity: 0, y: 40 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 0.7,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 90%",
+                }
+            }
+        )
+    })
+}
+
+// Shimmer en "Welcome" — siempre en movimiento
+if (document.querySelector(".home-welcome")) {
+    const welcomeEl = document.querySelector(".home-welcome")
+    welcomeEl.style.backgroundImage = "linear-gradient(90deg, #fff 0%, #fff 40%, #4182b4 50%, #fff 60%, #fff 100%)"
+    welcomeEl.style.backgroundSize = "200% auto"
+    welcomeEl.style.webkitBackgroundClip = "text"
+    welcomeEl.style.webkitTextFillColor = "transparent"
+    welcomeEl.style.backgroundClip = "text"
+
+    gsap.to(welcomeEl, {
+        backgroundPosition: "200% center",
+        duration: 3,
+        ease: "none",
+        repeat: -1
+    })
+}
+{
+    const canvas = document.createElement("canvas")
+    canvas.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  `
+    document.body.appendChild(canvas)
+
+    const ctx = canvas.getContext("2d")
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+
+    window.addEventListener("resize", () => {
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight
+    })
+
+    const particulas = Array.from({ length: 60 }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        r: Math.random() * 2 + 0.5,
+        speedX: (Math.random() - 0.5) * 0.4,
+        speedY: (Math.random() - 0.5) * 0.4,
+        opacity: Math.random() * 0.5 + 0.1
+    }))
+
+    function animarParticulas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+        particulas.forEach(p => {
+            p.x += p.speedX
+            p.y += p.speedY
+
+            // Rebotar en los bordes
+            if (p.x < 0 || p.x > canvas.width) p.speedX *= -1
+            if (p.y < 0 || p.y > canvas.height) p.speedY *= -1
+
+            ctx.beginPath()
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
+            ctx.fillStyle = `rgba(65, 130, 180, ${p.opacity})`
+            ctx.fill()
+        })
+
+        requestAnimationFrame(animarParticulas)
+    }
+
+    animarParticulas()
+}
+
+// ============ LANDING ============
+if (document.getElementById("landing-titulo")) {
+
+  // Logo
+  gsap.from("#landing-logo", {
+    duration: 1,
+    y: -60,
+    opacity: 0,
+    ease: "back.out(1.5)",
+    delay: 0.2
+  })
+
+  // Título letra por letra
+  const titulo = document.getElementById("landing-titulo")
+  const texto = titulo.innerText
+
+  titulo.innerHTML = texto
+    .split("")
+    .map(c => `<span style="
+      display: inline-block;
+      background: linear-gradient(90deg, #ffffff 0%, #ffffff 35%, #4182b4 48%, #DFEEF3 52%, #ffffff 65%, #ffffff 100%);
+      background-size: 250% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    ">${c === " " ? "&nbsp;" : c}</span>`)
+    .join("")
+
+  gsap.from("#landing-titulo span", {
+    duration: 0.7,
+    opacity: 0,
+    y: -30,
+    rotationX: 90,
+    transformOrigin: "top center",
+    perspective: 400,
+    stagger: 0.035,
+    ease: "back.out(2)",
+    delay: 0.5,
+    onComplete: () => {
+      gsap.to("#landing-titulo span", {
+        backgroundPosition: "250% center",
+        duration: 4,
+        ease: "none",
+        repeat: -1
+      })
+    }
+  })
+
+  // Línea de luz
+  gsap.to("#landing-linea", {
+    width: "320px",
+    duration: 1.2,
+    ease: "power3.out",
+    delay: 1.8
+  })
+
+  // Subtítulo
+  gsap.to("#landing-sub", {
+    opacity: 1,
+    duration: 1,
+    ease: "power2.out",
+    delay: 2
+  })
+
+  // Scroll indicator
+  gsap.to("#scroll-indicator", {
+    opacity: 1,
+    duration: 1,
+    delay: 2.8,
+    ease: "power2.out"
+  })
+
+  // Avioncito
+  const avion = document.getElementById("avion")
+  const emojisAvion = ["📦", "📦", "📫", "📬", "🎁"]
+
+  function volarAvion() {
+    const startY = Math.random() * (window.innerHeight * 0.6) + window.innerHeight * 0.1
+
+    gsap.set(avion, { x: -120, y: startY, opacity: 0 })
+
+    const estela = document.createElement("div")
+    estela.className = "estela"
+    estela.style.cssText = `
+      position: fixed;
+      top: ${startY + 15}px;
+      left: -120px;
+      width: 0px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(65,130,180,0.4));
+      pointer-events: none;
+      z-index: 4;
+      border-radius: 999px;
+    `
+    document.body.appendChild(estela)
+
+    const tl = gsap.timeline({
+      onComplete: () => {
+        estela.remove()
+        setTimeout(volarAvion, Math.random() * 6000 + 6000)
+      }
+    })
+
+    tl.to(avion, { opacity: 0.9, duration: 0.5 })
+      .to(avion, { x: window.innerWidth + 150, y: startY + (Math.random() - 0.5) * 80, duration: 7, ease: "none" }, "<")
+      .to(estela, { width: window.innerWidth + 150, duration: 7, ease: "none" }, "<")
+      .to(avion, { opacity: 0, duration: 0.5 }, "-=0.5")
+  }
+
+  setTimeout(volarAvion, 2500)
+
+  // Cajitas cayendo
+  function crearCajita() {
+    const cajita = document.createElement("div")
+    cajita.style.cssText = `
+      position: fixed;
+      z-index: 4;
+      pointer-events: none;
+      font-size: ${Math.random() * 16 + 20}px;
+      left: ${Math.random() * (window.innerWidth - 60)}px;
+      top: -50px;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+    `
+    cajita.textContent = emojisAvion[Math.floor(Math.random() * emojisAvion.length)]
+    document.body.appendChild(cajita)
+
+    gsap.to(cajita, {
+      y: window.innerHeight + 80,
+      x: (Math.random() - 0.5) * 100,
+      rotation: (Math.random() - 0.5) * 360,
+      opacity: 0,
+      duration: Math.random() * 4 + 4,
+      ease: "power1.in",
+      onComplete: () => cajita.remove()
+    })
+
+    setTimeout(crearCajita, Math.random() * 3000 + 2000)
+  }
+
+  setTimeout(crearCajita, 1500)
+}

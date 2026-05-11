@@ -20,6 +20,7 @@ export type ScannedRoutes = {
     'Enviomundo': { paramsTuple?: []; params?: {} }
     'comparator': { paramsTuple?: []; params?: {} }
     'courierprofile': { paramsTuple?: []; params?: {} }
+    'suscription': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'new_account.store': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
@@ -43,6 +44,7 @@ export type ScannedRoutes = {
     'Enviomundo': { paramsTuple?: []; params?: {} }
     'comparator': { paramsTuple?: []; params?: {} }
     'courierprofile': { paramsTuple?: []; params?: {} }
+    'suscription': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
   }
@@ -63,6 +65,7 @@ export type ScannedRoutes = {
     'Enviomundo': { paramsTuple?: []; params?: {} }
     'comparator': { paramsTuple?: []; params?: {} }
     'courierprofile': { paramsTuple?: []; params?: {} }
+    'suscription': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
   }
