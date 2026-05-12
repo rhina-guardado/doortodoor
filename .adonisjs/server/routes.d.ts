@@ -21,6 +21,7 @@ export type ScannedRoutes = {
     'comparator': { paramsTuple?: []; params?: {} }
     'courierprofile': { paramsTuple?: []; params?: {} }
     'suscription': { paramsTuple?: []; params?: {} }
+    'encomendistas': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'new_account.store': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
@@ -45,6 +46,7 @@ export type ScannedRoutes = {
     'comparator': { paramsTuple?: []; params?: {} }
     'courierprofile': { paramsTuple?: []; params?: {} }
     'suscription': { paramsTuple?: []; params?: {} }
+    'encomendistas': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
   }
@@ -66,6 +68,7 @@ export type ScannedRoutes = {
     'comparator': { paramsTuple?: []; params?: {} }
     'courierprofile': { paramsTuple?: []; params?: {} }
     'suscription': { paramsTuple?: []; params?: {} }
+    'encomendistas': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
   }
