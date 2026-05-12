@@ -1,58 +1,282 @@
-@layout() 
-    <body>
-<div class="relative bg-[#12254A] min-h-screen w-full overflow-y-auto">
-  <video autoplay loop muted src="/resources/assets/video2background.mp4"
-    class="fixed inset-0 w-full h-full object-cover z-0">
-  </video>
+@layout('suscription')
 
-<div class="flex">
-  <section class="m-40">
-<div
-          class="agency-card flex flex-col items-center border p-4 border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92] transition-transform hover:scale-102 rounded-xl bg-[#083D8A] w-80 shadow-lg">
-          <div class="relative">
-            <img src="resources/assets/cargorapido.png"
-              class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
-            <div class="absolute top-2 right-3 transition-transform hover:scale-120">
-           
-            </div>
-          </div>
-          <h1 class="text-center text-white font-bold text-2xl">Monthly</h1>
-          <p class="text-center text-white text-sm my-4"></p>
-          <div class="flex flex-col gap-1 items-center text-white border border-white/20 rounded-xl p-4 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-60">
-            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Real-time tracking</p>
-            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Insurance included</p>
-            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Physical offices</p>
-          </div>
-          <button
-            class="border rounded-full w-42 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 m-4">
-            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] btn-pupusa text-white">Select agency</p>
-          </button>
-        </div>
-  </section>
 
-  <section class="my-40">
-<div
-          class="agency-card flex flex-col items-center border p-4 border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92] transition-transform hover:scale-102 rounded-xl bg-[#083D8A] w-80 shadow-lg">
-          <div class="relative">
-            <img src="resources/assets/cargorapido.png"
-              class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
-            <div class="absolute top-2 right-3 transition-transform hover:scale-120">
-           
-            </div>
-          </div>
-          <h1 class="text-center text-white font-bold text-2xl">Cargo Rápido</h1>
-          <p class="text-center text-white text-sm my-4">Send it through established and reliable agencies with physical offices.</p>
-          <div class="flex flex-col gap-1 items-center text-white border border-white/20 rounded-xl p-4 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-60">
-            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Real-time tracking</p>
-            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Insurance included</p>
-            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">✓ Physical offices</p>
-          </div>
-          <button
-            class="border rounded-full w-42 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 m-4">
-            <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] btn-pupusa text-white">Select agency</p>
-          </button>
-        </div>
-  </section>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #060b1a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .title {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    margin-bottom: .3rem;
+  }
+
+  .subtitle {
+    color: rgba(255,255,255,.4);
+    font-size: .95rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .cards-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card-outer {
+    position: relative;
+    border-radius: 24px;
+    width: 240px;
+    cursor: pointer;
+  }
+
+  .canvas-border {
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .card-inner {
+    background: linear-gradient(160deg, #0d1b3e 0%, #0a1128 100%);
+    border-radius: 22px;
+    margin: 2px;
+    padding: 1.5rem 1.3rem 1.8rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .popular-badge {
+    display: inline-block;
+    font-size: .65rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #f59e0b;
+    margin-bottom: .8rem;
+  }
+
+  .plan-label {
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.4);
+    margin-bottom: .8rem;
+    display: block;
+  }
+
+  .price {
+    font-family: 'Syne', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: .15rem;
+  }
+
+  .price sub {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255,255,255,.5);
+    vertical-align: super;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .price sup {
+    font-size: .85rem;
+    color: rgba(255,255,255,.35);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+  }
+
+  .plan-desc {
+    font-size: .8rem;
+    color: rgba(255,255,255,.45);
+    margin-bottom: 1.2rem;
+  }
+
+  .divider {
+    height: 1px;
+    background: rgba(255,255,255,.08);
+    margin-bottom: 1.2rem;
+  }
+
+  .feature {
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+    margin-bottom: .6rem;
+    font-size: .78rem;
+    color: rgba(255,255,255,.7);
+    line-height: 1.4;
+  }
+
+  .feature-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-size: .6rem;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    margin-top: 1.4rem;
+    padding: .7rem;
+    border-radius: 50px;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: .85rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .btn-monthly {
+    background: rgba(59,130,246,.15);
+    color: #60a5fa;
+    border: 1px solid rgba(59,130,246,.3);
+  }
+
+  .btn-annual {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    color: #fff;
+  }
+</style>
+
+<h2 class="title">Elige tu plan</h2>
+<p class="subtitle">Haz crecer tu negocio con DoorToDoor</p>
+
+<div class="cards-wrapper">
+
+  <div class="card-outer" id="card1">
+    <canvas class="canvas-border" id="canvas1"></canvas>
+    <div class="card-inner">
+      <span class="plan-label">Mensual</span>
+      <div class="price"><sub>$</sub>8<sup>/mes</sup></div>
+      <p class="plan-desc">Especial para tu agencia</p>
+      <div class="divider"></div>
+      <div class="feature"><div class="feature-icon" style="background:rgba(59,130,246,.2)">✦</div>Aparece al top del catálogo</div>
+      <div class="feature"><div class="feature-icon" style="background:rgba(59,130,246,.2)">✦</div>20% más exposición</div>
+      <div class="feature"><div class="feature-icon" style="background:rgba(59,130,246,.2)">✦</div>Tu propio tracker</div>
+      <div class="feature"><div class="feature-icon" style="background:rgba(59,130,246,.2)">✦</div>WhatsApp status ads</div>
+      <button class="btn btn-monthly">Get Doorplan</button>
+    </div>
   </div>
-    </body>
+
+  <div class="card-outer" id="card2">
+    <canvas class="canvas-border" id="canvas2"></canvas>
+    <div class="card-inner">
+      <div class="popular-badge">⭐ Most popular plan</div>
+      <div class="price"><sub>$</sub>75<sup>/año</sup></div>
+      <p class="plan-desc">El plan más completo</p>
+      <div class="divider"></div>
+      <div class="feature"><div class="feature-icon" style="background:rgba(245,158,11,.2)">✦</div>WhatsApp status ads</div>
+      <div class="feature"><div class="feature-icon" style="background:rgba(245,158,11,.2)">✦</div>80% más exposición</div>
+      <div class="feature"><div class="feature-icon" style="background:rgba(245,158,11,.2)">✦</div>Tu propio tracker</div>
+      <div class="feature"><div class="feature-icon" style="background:rgba(245,158,11,.2)">✦</div>Collabs con creators salvadoreños</div>
+      <button class="btn btn-annual">Get Doorplan</button>
+    </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+  gsap.to('#card1', {
+    y: -14,
+    duration: 2.8,
+    ease: 'sine.inOut',
+    yoyo: true,
+    repeat: -1
+  });
+
+  gsap.to('#card2', {
+    y: -18,
+    duration: 2.8,
+    ease: 'sine.inOut',
+    yoyo: true,
+    repeat: -1,
+    delay: 0.8
+});
+
+  gsap.fromTo(['#card1', '#card2'],
+    { opacity: 0, y: 40, scale: 0.93 },
+    { opacity: 1, y: 0, scale: 1, duration: 0.9, ease: 'back.out(1.4)', stagger: 0.18 }
+  );
+
+  function drawBorder(canvasId, colors, speed) {
+    const canvas = document.getElementById(canvasId);
+    const card = canvas.parentElement;
+    canvas.width = card.offsetWidth;
+    canvas.height = card.offsetHeight;
+    const ctx = canvas.getContext('2d');
+    let angle = 0;
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const w = canvas.width, h = canvas.height, r = 24, lw = 2.5;
+      ctx.lineWidth = lw;
+
+      const grad = ctx.createLinearGradient(
+        w/2 + Math.cos(angle) * w,
+        h/2 + Math.sin(angle) * h,
+        w/2 - Math.cos(angle) * w,
+        h/2 - Math.sin(angle) * h
+      );
+      colors.forEach((c, i) => grad.addColorStop(i / (colors.length - 1), c));
+
+      ctx.strokeStyle = grad;
+      ctx.shadowColor = colors[0];
+      ctx.shadowBlur = 12;
+
+      ctx.beginPath();
+      ctx.moveTo(r, 0);
+      ctx.lineTo(w - r, 0);
+      ctx.quadraticCurveTo(w, 0, w, r);
+      ctx.lineTo(w, h - r);
+      ctx.quadraticCurveTo(w, h, w - r, h);
+      ctx.lineTo(r, h);
+      ctx.quadraticCurveTo(0, h, 0, h - r);
+      ctx.lineTo(0, r);
+      ctx.quadraticCurveTo(0, 0, r, 0);
+      ctx.stroke();
+
+      angle += speed;
+      requestAnimationFrame(draw);
+    }
+    draw();
+  }
+
+  drawBorder('canvas1', ['#3b82f6', '#8b5cf6', '#ec4899', '#3b82f6'], 0.025);
+  drawBorder('canvas2', ['#f59e0b', '#ef4444', '#f59e0b', '#facc15'], 0.04);
+
+  document.querySelectorAll('.card-outer').forEach(card => {
+    card.addEventListener('mouseenter', () => gsap.to(card, { scale: 1.04, duration: 0.3, ease: 'power2.out' }));
+    card.addEventListener('mouseleave', () => gsap.to(card, { scale: 1, duration: 0.3, ease: 'power2.out' }));
+  });
+</script>
+</div>
 @end

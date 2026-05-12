@@ -7,19 +7,171 @@
 import { BaseModel, column } from '@adonisjs/lucid/orm'
 import { DateTime } from 'luxon'
 
-export class UserSchema extends BaseModel {
-  static $columns = ['createdAt', 'email', 'fullName', 'id', 'password', 'updatedAt'] as const
-  $columns = UserSchema.$columns
+export class AgencySchema extends BaseModel {
+  static $columns = ['agencyName', 'countryDestination', 'countryOrigin', 'createdAt', 'description', 'facebook', 'id', 'instagram', 'isSuscribed', 'pricePerPound', 'updatedAt', 'userId', 'whatsapp'] as const
+  $columns = AgencySchema.$columns
+  @column()
+  declare agencyName: string
+  @column()
+  declare countryDestination: string
+  @column()
+  declare countryOrigin: string
   @column.dateTime({ autoCreate: true })
-  declare createdAt: DateTime
+  declare createdAt: DateTime | null
+  @column()
+  declare description: string | null
+  @column()
+  declare facebook: string | null
+  @column({ isPrimary: true })
+  declare id: number
+  @column()
+  declare instagram: string | null
+  @column()
+  declare isSuscribed: boolean | null
+  @column()
+  declare pricePerPound: number
+  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  declare updatedAt: DateTime | null
+  @column()
+  declare userId: number | null
+  @column()
+  declare whatsapp: string | null
+}
+
+export class IndependentCourierSchema extends BaseModel {
+  static $columns = ['countryDestination', 'countryOrigin', 'createdAt', 'description', 'fullName', 'id', 'isSuscribed', 'pricePerPound', 'updatedAt', 'userId', 'whatsapp'] as const
+  $columns = IndependentCourierSchema.$columns
+  @column()
+  declare countryDestination: string
+  @column()
+  declare countryOrigin: string
+  @column.dateTime({ autoCreate: true })
+  declare createdAt: DateTime | null
+  @column()
+  declare description: string | null
+  @column()
+  declare fullName: string
+  @column({ isPrimary: true })
+  declare id: number
+  @column()
+  declare isSuscribed: boolean | null
+  @column()
+  declare pricePerPound: number
+  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  declare updatedAt: DateTime | null
+  @column()
+  declare userId: number | null
+  @column()
+  declare whatsapp: string | null
+}
+
+export class MessageSchema extends BaseModel {
+  static $columns = ['createdAt', 'id', 'isRead', 'message', 'orderId', 'senderId', 'updatedAt'] as const
+  $columns = MessageSchema.$columns
+  @column.dateTime({ autoCreate: true })
+  declare createdAt: DateTime | null
+  @column({ isPrimary: true })
+  declare id: number
+  @column()
+  declare isRead: boolean | null
+  @column()
+  declare message: string
+  @column()
+  declare orderId: number | null
+  @column()
+  declare senderId: number | null
+  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  declare updatedAt: DateTime | null
+}
+
+export class OrderSchema extends BaseModel {
+  static $columns = ['agencyId', 'clientId', 'comisionAmount', 'courierId', 'createdAt', 'id', 'packageDescription', 'paymentReleased', 'status', 'totalAmount', 'updatedAt'] as const
+  $columns = OrderSchema.$columns
+  @column()
+  declare agencyId: number | null
+  @column()
+  declare clientId: number | null
+  @column()
+  declare comisionAmount: number
+  @column()
+  declare courierId: number | null
+  @column.dateTime({ autoCreate: true })
+  declare createdAt: DateTime | null
+  @column({ isPrimary: true })
+  declare id: number
+  @column()
+  declare packageDescription: string
+  @column()
+  declare paymentReleased: boolean | null
+  @column()
+  declare status: string | null
+  @column()
+  declare totalAmount: number
+  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  declare updatedAt: DateTime | null
+}
+
+export class PaymentSchema extends BaseModel {
+  static $columns = ['amount', 'comision', 'createdAt', 'id', 'orderId', 'releasedAt', 'status', 'updatedAt'] as const
+  $columns = PaymentSchema.$columns
+  @column()
+  declare amount: number
+  @column()
+  declare comision: number
+  @column.dateTime({ autoCreate: true })
+  declare createdAt: DateTime | null
+  @column({ isPrimary: true })
+  declare id: number
+  @column()
+  declare orderId: number | null
+  @column.dateTime()
+  declare releasedAt: DateTime | null
+  @column()
+  declare status: string | null
+  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  declare updatedAt: DateTime | null
+}
+
+export class TrackingUpdateSchema extends BaseModel {
+  static $columns = ['createdAt', 'description', 'id', 'location', 'orderId', 'status', 'updatedAt'] as const
+  $columns = TrackingUpdateSchema.$columns
+  @column.dateTime({ autoCreate: true })
+  declare createdAt: DateTime | null
+  @column()
+  declare description: string | null
+  @column({ isPrimary: true })
+  declare id: number
+  @column()
+  declare location: string | null
+  @column()
+  declare orderId: number | null
+  @column()
+  declare status: string
+  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  declare updatedAt: DateTime | null
+}
+
+export class UserSchema extends BaseModel {
+  static $columns = ['country', 'createdAt', 'email', 'fullName', 'id', 'password', 'phone', 'profilePicture', 'role', 'updatedAt'] as const
+  $columns = UserSchema.$columns
+  @column()
+  declare country: string | null
+  @column.dateTime({ autoCreate: true })
+  declare createdAt: DateTime | null
   @column()
   declare email: string
   @column()
-  declare fullName: string | null
+  declare fullName: string
   @column({ isPrimary: true })
   declare id: number
   @column({ serializeAs: null })
   declare password: string
+  @column()
+  declare phone: string | null
+  @column()
+  declare profilePicture: string | null
+  @column()
+  declare role: string
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   declare updatedAt: DateTime | null
 }
