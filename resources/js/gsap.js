@@ -365,3 +365,47 @@ if (document.getElementById("landing-titulo")) {
   setTimeout(crearCajita, 1500)
 }
 
+
+
+
+
+// Pulso de brillo infinito para iconos premium
+gsap.to(".icon-premium", {
+  filter: "drop-shadow(0 0 6px #4182B4) drop-shadow(0 0 12px #4182B4)",
+  scale: 1.15,
+  duration: 1.2,
+  ease: "sine.inOut",
+  repeat: -1,        // infinito
+  yoyo: true,        // va y vuelve
+});
+
+
+
+
+
+
+
+
+
+
+
+
+gsap.to(".card-premium", {
+  boxShadow: "0 0 0 2px #FFD700, 0 0 20px 15px #FFD700", // Aumenté el brillo final
+  duration: 1.5,
+  repeat: -1,      // Infinito
+  yoyo: true,      // Hace que regrese suavemente en lugar de saltar
+  ease: "sine.inOut" // Hace que el pulso se sienta natural
+});
+
+gsap.to(".card-premium", {
+  duration: 2,
+  keyframes: {
+    "0%":   { boxShadow: "0 0 0 2px #FFD700, 0 0 20px 6px #FFD700" }, // Dorado
+    "50%":  { boxShadow: "0 0 0 2px #E879F9, 0 0 20px 6px #E879F9" }, // Rosa
+    "100%": { boxShadow: "0 0 0 2px #38BDF8, 0 0 20px 6px #38BDF8" }  // Azul
+  },
+  repeat: -1,
+  yoyo: true, // Al llegar al azul, vuelve al rosa y luego al dorado
+  ease: "none" // Mantiene la velocidad constante para que no parezca que "frena"
+});
