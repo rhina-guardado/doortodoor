@@ -598,10 +598,10 @@
             <img src="/resources/assets/cargorapido.png" alt="Cargo Express">
             <div class="chat-item-info">
               <div class="chat-item-top">
-                <span class="chat-item-name">Cargo Express</span>
+                <span class="chat-item-name">Cargo Rápido</span>
                 <span class="chat-item-time">9:55 am</span>
               </div>
-              <div class="chat-item-preview">Último mensaje...</div>
+              <div class="chat-item-preview">Last message...</div>
             </div>
           </div>
 
@@ -610,9 +610,9 @@
             <div class="chat-item-info">
               <div class="chat-item-top">
                 <span class="chat-item-name">FIDIX</span>
-                <span class="chat-item-time">ayer</span>
+                <span class="chat-item-time">Yesterday</span>
               </div>
-              <div class="chat-item-preview">Su paquete llegó a destino</div>
+              <div class="chat-item-preview">Your packet has arrived to the destination</div>
             </div>
           </div>
 
@@ -621,9 +621,9 @@
             <div class="chat-item-info">
               <div class="chat-item-top">
                 <span class="chat-item-name">GlobalBox Express</span>
-                <span class="chat-item-time">lun</span>
+                <span class="chat-item-time">Mon</span>
               </div>
-              <div class="chat-item-preview">¿Necesita algo más?</div>
+              <div class="chat-item-preview">Need something else?</div>
             </div>
           </div>
         </div>
@@ -636,8 +636,8 @@
         <div class="conv-header">
           <img src="/resources/assets/cargorapido.png" alt="Cargo Express">
           <div>
-            <div class="conv-header-name">Cargo Express</div>
-            <div class="conv-header-status">En línea</div>
+            <div class="conv-header-name">Cargo Rápido</div>
+            <div class="conv-header-status">Online</div>
           </div>
         </div>
 
@@ -646,13 +646,13 @@
           <div class="msg-received">
             <img src="/resources/assets/cargorapido.png" alt="">
             <div class="bubble bubble-received">
-              <p>Hola, ¿cómo estás?</p>
+              <p>Hello! How are you?</p>
               <small class="bubble-time">9:55 am</small>
             </div>
           </div>
           <div class="msg-sent">
             <div class="bubble bubble-sent">
-              <p>¡Todo bien! ¿Y tú?</p>
+              <p>Everything's good! What about you?</p>
               <small class="bubble-time">9:56 am</small>
             </div>
           </div>
@@ -670,7 +670,7 @@
 
         <!-- Input -->
         <div class="input-area">
-          <input id="messageInput" type="text" placeholder="Escribe un mensaje...">
+          <input id="messageInput" type="text" placeholder="Type a message...">
           <button id="sendBtn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -717,12 +717,12 @@
   }
 
   function respuestaAutomatica(userText) {
-    let respuesta = "¡Gracias por tu mensaje! 😊";
+    let respuesta = "Thank you for your message! 😊";
 
-    if (userText.toLowerCase().includes("okey estaré pendiente")) {
-      respuesta = "Okey a la orden, le aviso cuando esté afuera";
-    } else if (userText.toLowerCase().includes("ya esta cerca?")) {
-      respuesta = "¡Sí estoy a dos calles de mi destino!";
+    if (userText.toLowerCase().includes("Ok, I will be waiting for it.")) {
+      respuesta = "Ok then! I will let you know when I'm outside";
+    } else if (userText.toLowerCase().includes("Are you close?")) {
+      respuesta = "Yes, I'm two blocks away from my destination!";
     }
 
     mostrarTyping();
