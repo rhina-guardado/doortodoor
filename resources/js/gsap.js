@@ -391,7 +391,7 @@ gsap.to(".icon-premium", {
 
 
 gsap.to(".card-premium", {
-  boxShadow: "0 0 0 2px #FFD700, 0 0 20px 15px #FFD700", // Aumenté el brillo final
+  boxShadow: "0 0 0 2px #4182b4, 0 0 20px 15px #4182b4", // Aumenté el brillo final
   duration: 1.5,
   repeat: -1,      // Infinito
   yoyo: true,      // Hace que regrese suavemente en lugar de saltar
@@ -401,11 +401,12 @@ gsap.to(".card-premium", {
 gsap.to(".card-premium", {
   duration: 2,
   keyframes: {
-    "0%":   { boxShadow: "0 0 0 2px #FFD700, 0 0 20px 6px #FFD700" }, // Dorado
-    "50%":  { boxShadow: "0 0 0 2px #E879F9, 0 0 20px 6px #E879F9" }, // Rosa
-    "100%": { boxShadow: "0 0 0 2px #38BDF8, 0 0 20px 6px #38BDF8" }  // Azul
+    "0%":   { boxShadow: "0 0 0 2px #4182b4, 0 0 20px 6px #4182b4" }, // Dorado
+    "50%":  { boxShadow: "0 0 0 2px #2467A2, 0 0 20px 6px #2467A2" }, // Rosa
+    "100%": { boxShadow: "0 0 0 2px #4182b4, 0 0 20px 6px #4182b4" }  // Azul
   },
   repeat: -1,
   yoyo: true, // Al llegar al azul, vuelve al rosa y luego al dorado
   ease: "none" // Mantiene la velocidad constante para que no parezca que "frena"
 });
+
