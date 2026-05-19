@@ -3,44 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 gsap.registerPlugin(ScrollTrigger)
 
-// ============ AGENCIAS ============
-if (document.querySelector(".titulo-principal")) {
-    const titulo = document.querySelector(".titulo-principal")
-    const texto = titulo.innerText
-    titulo.innerHTML = texto
-        .split("")
-        .map(char => `<span class="letra" style="display:inline-block">${char === " " ? "&nbsp;" : char}</span>`)
-        .join("")
 
-    gsap.from(".letra", {
-        duration: 0.6,
-        opacity: 0,
-        y: -20,
-        rotationX: 90,
-        stagger: 0.03,
-        ease: "back.out(1.7)"
-    })
-}
-
-if (document.querySelector(".linea-deco")) {
-    gsap.from(".linea-deco", {
-        duration: 1.5,
-        scaleX: 0,
-        ease: "power3.out",
-        delay: 0.4
-    })
-}
-
-if (document.querySelector(".agency-card")) {
-    gsap.from(".agency-card", {
-        duration: 0.7,
-        opacity: 0,
-        y: 60,
-        stagger: 0.15,
-        ease: "power2.out",
-        delay: 0.3
-    })
-}
 
 // ============ COMPARADOR ============
 if (document.querySelector(".comp-titulo")) {
@@ -410,3 +373,70 @@ gsap.to(".card-premium", {
   ease: "none" // Mantiene la velocidad constante para que no parezca que "frena"
 });
 
+
+
+
+//agencias
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+const exists = (selector) => document.querySelector(selector);
+
+if (exists(".titulo-principal")) {
+  gsap.from(".titulo-principal", {
+    y: 80, opacity: 0, duration: 1, ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".titulo-principal",
+      start: "top 85%",
+      toggleActions: "play none none reverse"
+    }
+  });
+}
+
+if (exists(".linea-deco")) {
+  gsap.from(".linea-deco", {
+    scaleX: 0, opacity: 0, duration: 0.8, delay: 0.3,
+    ease: "power2.out", transformOrigin: "left center",
+    scrollTrigger: {
+      trigger: ".linea-deco",
+      start: "top 85%",
+      toggleActions: "play none none reverse"
+    }
+  });
+}
+
+gsap.utils.toArray(".agency-card").forEach((card, index) => {
+  gsap.from(card, {
+    y: 120, opacity: 0, duration: 0.7,
+    delay: index * 0.12, ease: "power3.out",
+    scrollTrigger: {
+      trigger: card,
+      start: "top 88%", end: "top 20%",
+      toggleActions: "play none none reverse"
+    }
+  });
+});
+
+if (exists("input")) {
+  gsap.from("input", {
+    y: 50, opacity: 0, duration: 0.8, ease: "back.out(1.7)",
+    scrollTrigger: {
+      trigger: "input",
+      start: "top 90%",
+      toggleActions: "play none none reverse"
+    }
+  });
+}
+
+if (exists("footer")) {
+  gsap.from("footer", {
+    y: 60, opacity: 0, duration: 0.9, ease: "power2.out",
+    scrollTrigger: {
+      trigger: "footer",
+      start: "top 95%",
+      toggleActions: "play none none reverse"
+    }
+  });
+}
