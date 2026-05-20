@@ -1,0 +1,118 @@
+@layout()
+
+<div class="relative bg-[#12254A] min-h-screen w-full overflow-y-auto">
+  <video autoplay loop muted src="/resources/assets/video2background.mp4"
+    class="fixed inset-0 w-full h-full object-cover z-0">
+  </video>
+
+  <nav class="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-6 bg-transparent">
+
+    <a href="/" class="flex items-center">
+      <img src="resources\assets\solo_to.png" alt="Logo doortodoor"
+        class="h-18 w-auto object-contain hover:scale-105 transition-duration-400">
+    </a>
+
+    <div class="relative group">
+      <button
+        class="flex items-center gap-2 text-white bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all active:scale-95">
+        <span class="font-medium">Menu</span>
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <div
+        class="absolute right-0 mt-3 w-56 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] overflow-hidden py-2 border border-white/20">
+        <a href="profile"
+          class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Your
+          profile</a>
+        <a href="todavia no esta"
+          class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Settings</a>
+        <div class="h-[1px] bg-slate-200 my-1"></div>
+        <a href="tampoco se puede"
+          class="block px-4 py-2.5 text-sm text-red-600 hover:bg-red-500  hover:text-white transition-colors">Sign
+          out</a>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer
+    class="relative z-10 flex flex-row items-center justify-around bg-gradient-to-r from-[#12254A]/70 via-[#0D4576]/30 to-[#12254A]/70">
+
+    <div class="flex-shrink-0">
+      <img src="resources/assets/solo_to.png"
+        class="h-48 w-48 rounded-full  my-6 object-cover shadow-[0_10px_10px_0_rgba(0,0,0,0.3)]">
+    </div>
+
+    <div class="flex flex-row items-start gap-16 p-2">
+
+
+      <div class="flex flex-col items-center gap-3">
+        <p class="pb-4 font-bold text-lg text-white text-shadow-lg/20">Our Team</p>
+        <div class="flex flex-col items-center gap-2 text-white">
+          <a href="about_us.com" target="_blank"
+            class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">About Us</a>
+          <a href="privacy_policy.com" target="_blank"
+            class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">Privacy Policy</a>
+          <a href="contact_us.com" target="_blank"
+            class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">Contact Us</a>
+        </div>
+      </div>
+
+
+      <div class="flex flex-col items-center gap-3">
+        <p class="pb-4 font-bold text-lg text-white text-shadow-lg/20 ">Agencias</p>
+        <div class="flex flex-row gap-10 text-white">
+          <div class="flex flex-col text-center gap-2">
+            <a href="Fidix" target="_blank"
+              class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">FIDIX</a>
+            <a href="Enviomundo" target="_blank"
+              class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">EnvíoMundo</a>
+            <a href="AY" target="_blank"
+              class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">AY</a>
+          </div>
+          <div class="flex flex-col text-center gap-2">
+            <a href="CargoRapido" target="_blank"
+              class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">CargoRápido</a>
+            <a href="ConectExpress" target="_blank"
+              class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">ConnectExpress</a>
+            <a href="GlobalBox" target="_blank"
+              class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">GlobalBox
+              Express</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flex flex-col items-center gap-3">
+        <p class="pb-4 font-bold text-lg text-white text-shadow-lg/20">Follow Us</p>
+        <div class="flex flex-row gap-4">
+          <a href="facebook.com" target="_blank" class="transition-transform hover:scale-110">
+            <img src="resources/assets/facebook.png" class="h-10 w-10">
+          </a>
+          <a href="instagram.com" target="_blank" class="transition-transform hover:scale-110">
+            <img src="resources/assets/insta.png" class="h-10 w-10">
+          </a>
+          <a href="twitter.com" target="_blank" class="transition-transform hover:scale-110">
+            <img src="resources/assets/twitter.png" class="h-10 w-10">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  @end
