@@ -29,6 +29,10 @@ router.on('/comparator').render('pages/comparator').as('comparator')
 router.on('/courierprofile').render('pages/courierprofile').as('courierprofile')
 router.on('/suscription').render('pages/suscription').as('suscription')
 router.on('/encomendistas').render('pages/encomendistas').as('encomendistas')
+router.on('/advice1').render('pages/advice1').as('advice1')
+router.on('/advice2').render('pages/advice2').as('advice2')
+
+
 
 router
   .group(() => {

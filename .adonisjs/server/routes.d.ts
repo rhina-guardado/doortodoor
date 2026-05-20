@@ -22,6 +22,8 @@ export type ScannedRoutes = {
     'courierprofile': { paramsTuple?: []; params?: {} }
     'suscription': { paramsTuple?: []; params?: {} }
     'encomendistas': { paramsTuple?: []; params?: {} }
+    'advice1': { paramsTuple?: []; params?: {} }
+    'advice2': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'new_account.store': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
@@ -47,6 +49,8 @@ export type ScannedRoutes = {
     'courierprofile': { paramsTuple?: []; params?: {} }
     'suscription': { paramsTuple?: []; params?: {} }
     'encomendistas': { paramsTuple?: []; params?: {} }
+    'advice1': { paramsTuple?: []; params?: {} }
+    'advice2': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
   }
@@ -69,6 +73,8 @@ export type ScannedRoutes = {
     'courierprofile': { paramsTuple?: []; params?: {} }
     'suscription': { paramsTuple?: []; params?: {} }
     'encomendistas': { paramsTuple?: []; params?: {} }
+    'advice1': { paramsTuple?: []; params?: {} }
+    'advice2': { paramsTuple?: []; params?: {} }
     'signup': { paramsTuple?: []; params?: {} }
     'session.create': { paramsTuple?: []; params?: {} }
   }
