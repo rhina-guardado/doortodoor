@@ -1,233 +1,433 @@
 @layout()
 <div>
-    <div class="relative min-h-screen w-full ">
-        <video autoplay loop muted src="/resources/assets/video2background.mp4"
-            class="fixed inset-0 w-full h-full object-cover -z-10">
-        </video>
+  <div class="relative min-h-screen w-full ">
+    <video autoplay loop muted src="/resources/assets/video2background.mp4"
+      class="fixed inset-0 w-full h-full object-cover -z-10">
+    </video>
 
-        <nav
-            class="left-0 w-full z-[9999] flex justify-between items-center px-8 py-6 bg-gradient-to-r from-[#12254A]/60 via-[#0D4576]/60 to-[#12254A]/60 backdrop-blur-md mb-26">
-            <a href="/" class="flex items-center">
-                <img src="resources/assets/solo_to.png" alt="Logo doortodoor"
-                    class="h-18 w-auto rounded-full hover:scale-105 transition-duration-400 object-cover shadow-[0_10px_8px_0_rgba(0,0,0,0.3)]">
-            </a>
+    <nav
+      class="left-0 w-full z-[9999] flex justify-between items-center px-8 py-6 bg-gradient-to-r from-[#12254A]/60 via-[#0D4576]/60 to-[#12254A]/60 backdrop-blur-md mb-26">
+      <a href="/" class="flex items-center">
+        <img src="resources/assets/solo_to.png" alt="Logo doortodoor"
+          class="h-18 w-auto rounded-full hover:scale-105 transition-duration-400 object-cover shadow-[0_10px_8px_0_rgba(0,0,0,0.3)]">
+      </a>
 
-            <a href="home.com" target="_blank"
-                class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">Home</a>
+      <a href="home.com" target="_blank"
+        class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">Home</a>
 
-            <div class="relative group" style="z-index:9999">
-                <button
-                    class="flex items-center cursor-pointer gap-2 text-white bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all active:scale-95">
-                    <span class="font-medium">Menu</span>
-                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-                <div
-                    class="absolute right-0 mt-3 w-56 bg-white/70 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999] overflow-hidden py-2 border border-white/20">
-                    <a href="#"
-                        class="block px-4 py-2.5 text-sm font-medium text-slate-800 hover:bg-[#0D4576] hover:text-white transition-colors">Your
-                        profile</a>
-                    <a href="#"
-                        class="block px-4 py-2.5 text-sm text-slate-800 font-medium hover:bg-[#0D4576] hover:text-white transition-colors">Settings</a>
-                    <div class="h-[1px] bg-slate-200 my-1"></div>
-                    <a href="#"
-                        class="block px-4 py-2.5 text-sm font-medium text-[#12254A] hover:bg-[#12254A] hover:text-white transition-colors">Sign
-                        out</a>
+      <div class="relative group" style="z-index:9999">
+        <button
+          class="flex items-center cursor-pointer gap-2 text-white bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all active:scale-95">
+          <span class="font-medium">Menu</span>
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <div
+          class="absolute right-0 mt-3 w-56 bg-white/70 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999] overflow-hidden py-2 border border-white/20">
+          <a href="#"
+            class="block px-4 py-2.5 text-sm font-medium text-slate-800 hover:bg-[#0D4576] hover:text-white transition-colors">Your
+            profile</a>
+          <a href="#"
+            class="block px-4 py-2.5 text-sm text-slate-800 font-medium hover:bg-[#0D4576] hover:text-white transition-colors">Settings</a>
+          <div class="h-[1px] bg-slate-200 my-1"></div>
+          <a href="#"
+            class="block px-4 py-2.5 text-sm font-medium text-[#12254A] hover:bg-[#12254A] hover:text-white transition-colors">Sign
+            out</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="flex flex-col items-center justify-center mt-4">
+      <p
+        class="titulo-principal text-center text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] text-3xl font-semibold pointer-events-none px-22 mx-14 py-4">
+        Encomendistas
+      </p>
+      <div
+        class="linea-deco flex justify-self-center h-1 w-100 bg-linear-to-r from-[#4182B4] to-[#0D4576] drop-shadow-[0_0_8px_#4182b4]">
+      </div>
+    </div>
+
+
+
+    <div class="flex flex-col items-center justify-center p-12 mx-16">
+      <div class="flex flex-row flex-wrap justify-center gap-16 p-4">
+        <!-- ================= MARÍA ================= -->
+        <div
+          class="agency-card relative flex flex-col items-center p-4 rounded-xl border border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92] transition-transform hover:scale-102 bg-[#083D8A] w-100 shadow-lg">
+          <div class=" rounded-full h-60 w-60 border  ">
+            <img class="h-full w-full rounded-full object-cover aspect-square" src="resources/assets/maria.png"
+              class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
+            <div class="absolute top-2 right-3 transition-transform hover:scale-120">
+              <button>
+                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
+              </button>
+            </div>
+          </div>
+          <h1 class="text-center text-white font-bold text-2xl">María</h1>
+
+          <p class="text-center text-white text-sm my-4">Experienced logistics runner with deep knowledge of local
+            routes. Offering secure bag space to ensure your packages are delivered safely, carefully, and right on
+            time.</p>
+
+          <div
+            class="flex flex-col gap-2 text-white border border-white/20 rounded-xl p-3 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-80">
+
+            <div class="flex flex-row justify-between items-center w-full">
+              <div class="flex flex-col items-start pl-2 mt-2">
+                <div class="flex flex-row">
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined">star_half</span>
+                  <span class="material-symbols-outlined">star_rate</span>
                 </div>
+
+                <button
+                  class="flex items-center gap-1 text-xs text-sky-300 hover:text-white transition-colors mt-1 cursor-pointer">
+                  <span class="material-symbols-outlined text-xs">forum</span>
+                  <span>(247 reviews)</span>
+                </button>
+              </div>
+
+              <div class="flex flex-row p-2 items-center gap-1">
+                <span class="material-symbols-outlined">package_2</span>
+                <p class="text-white">+345,348</p>
+              </div>
             </div>
-        </nav>
 
 
-        <div class="flex flex-col items-center justify-center mt-4">
-            <p
-                class="titulo-principal text-center text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] text-3xl font-semibold pointer-events-none px-22 mx-14 py-4">
-                Encomendistas
-            </p>
-            <div
-                class="linea-deco flex justify-self-center h-1 w-100 bg-linear-to-r from-[#4182B4] to-[#0D4576] drop-shadow-[0_0_8px_#4182b4]">
+            <div class="h-[1px] bg-white/10 w-full px-2"></div>
+
+
+            <div class="text-center pb-2 pt-1">
+              <p class="text-xs text-sky-300 font-medium tracking-wide uppercase">Next trip:</p>
+              <p class="text-sm font-semibold text-white">September 12, 2026</p>
             </div>
+          </div>
+
+          <button
+            class="border rounded-full w-84 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 mx-4 mt-6">
+            <a href="http://localhost:3333/chat"
+              class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] btn-pupusa text-white">Chat
+              with carrier</a>
+          </button>
+        </div>
+
+        <!-- ================= JOSE ================= -->
+        <div
+          class="agency-card relative flex flex-col items-center p-4 rounded-xl border border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92] transition-transform hover:scale-102 bg-[#083D8A] w-100 shadow-lg">
+          <div class=" rounded-full h-60 w-60 border  ">
+            <img class="h-full w-full rounded-full object-cover aspect-square" src="resources/assets/jose.png"
+              class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
+            <div class="absolute top-2 right-3 transition-transform hover:scale-120">
+              <button>
+                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
+              </button>
+            </div>
+          </div>
+          <h1 class="text-center text-white font-bold text-2xl">José</h1>
+
+          <p class="text-center text-white text-sm my-4">Trustworthy courier with secure bag space available for your
+            shipments. Committed to ensuring your package arrives intact, safe, and on time.</p>
+
+          <div
+            class="flex flex-col gap-2 text-white border border-white/20 rounded-xl p-3 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-80">
+
+            <div class="flex flex-row justify-between items-center w-full">
+              <div class="flex flex-col items-start pl-2 mt-2">
+                <div class="flex flex-row">
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined">star_half</span>
+                </div>
+
+                <button
+                  class="flex items-center gap-1 text-xs text-sky-300 hover:text-white transition-colors mt-1 cursor-pointer">
+                  <span class="material-symbols-outlined text-xs">forum</span>
+                  <span>(465 reviews)</span>
+                </button>
+              </div>
+
+              <div class="flex flex-row p-2 items-center gap-1">
+                <span class="material-symbols-outlined">package_2</span>
+                <p class="text-white">+586,564</p>
+              </div>
+            </div>
+
+
+            <div class="h-[1px] bg-white/10 w-full px-2"></div>
+
+
+            <div class="text-center pb-2 pt-1">
+              <p class="text-xs text-sky-300 font-medium tracking-wide uppercase">Next trip:</p>
+              <p class="text-sm font-semibold text-white">June 16, 2026</p>
+            </div>
+          </div>
+
+          <button
+            class="border rounded-full w-84 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 mx-4 mt-6">
+            <a href="http://localhost:3333/chat"
+              class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] btn-pupusa text-white">Chat
+              with carrier</a>
+          </button>
+        </div>
+
+        <!-- ================= LORENA ================= -->
+        <div
+          class="agency-card relative flex flex-col items-center p-4 rounded-xl border border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92] transition-transform hover:scale-102 bg-[#083D8A] w-100 shadow-lg">
+          <div class=" rounded-full h-60 w-60 border  ">
+            <img class="h-full w-full rounded-full object-cover aspect-square" src="resources/assets/lorena.png"
+              class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
+            <div class="absolute top-2 right-3 transition-transform hover:scale-120">
+              <button>
+                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
+              </button>
+            </div>
+          </div>
+          <h1 class="text-center text-white font-bold text-2xl">Lorena</h1>
+
+          <p class="text-center text-white text-sm my-4"> I´m ready to transport your package with the same care as if
+            it were my own. Maximizing my daily routes for safe and reliable deliveries.</p>
+
+          <div
+            class="flex flex-col gap-2 text-white border border-white/20 rounded-xl p-3 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-80">
+
+            <div class="flex flex-row justify-between items-center w-full">
+              <div class="flex flex-col items-start pl-2 mt-2">
+                <div class="flex flex-row">
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined">star_half</span>
+                  <span class="material-symbols-outlined">star_rate</span>
+                </div>
+
+                <button
+                  class="flex items-center gap-1 text-xs text-sky-300 hover:text-white transition-colors mt-1 cursor-pointer">
+                  <span class="material-symbols-outlined text-xs">forum</span>
+                  <span>(511 reviews)</span>
+                </button>
+              </div>
+
+              <div class="flex flex-row p-2 items-center gap-1">
+                <span class="material-symbols-outlined">package_2</span>
+                <p class="text-white">+122,466</p>
+              </div>
+            </div>
+
+
+            <div class="h-[1px] bg-white/10 w-full px-2"></div>
+
+
+            <div class="text-center pb-2 pt-1">
+              <p class="text-xs text-sky-300 font-medium tracking-wide uppercase">Next trip:</p>
+              <p class="text-sm font-semibold text-white">October 5, 2026</p>
+            </div>
+          </div>
+
+          <button
+            class="border rounded-full w-84 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 mx-4 mt-6">
+            <a href="http://localhost:3333/chat"
+              class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] btn-pupusa text-white">Chat
+              with carrier</a>
+          </button>
+        </div>
+
+        <!-- ================= DIEGO ================= -->
+        <div
+          class="agency-card relative flex flex-col items-center p-4 rounded-xl border border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92] transition-transform hover:scale-102 bg-[#083D8A] w-100 shadow-lg">
+          <div class=" rounded-full h-60 w-60 border  ">
+            <img class="h-full w-full rounded-full object-cover aspect-square" src="resources/assets/diego.png"
+              class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
+            <div class="absolute top-2 right-3 transition-transform hover:scale-120">
+              <button>
+                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
+              </button>
+            </div>
+          </div>
+          <h1 class="text-center text-white font-bold text-2xl">Diego</h1>
+
+          <p class="text-center text-white text-sm my-4">Responsible traveler offering secure space on my daily commutes
+            to move your packages with full transparency, honesty, and punctuality.</p>
+
+          <div
+            class="flex flex-col gap-2 text-white border border-white/20 rounded-xl p-3 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-80">
+
+            <div class="flex flex-row justify-between items-center w-full">
+              <div class="flex flex-col items-start pl-2 mt-2">
+                <div class="flex flex-row">
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined">star_half</span>
+                </div>
+
+                <button
+                  class="flex items-center gap-1 text-xs text-sky-300 hover:text-white transition-colors mt-1 cursor-pointer">
+                  <span class="material-symbols-outlined text-xs">forum</span>
+                  <span>(587 reviews)</span>
+                </button>
+              </div>
+
+              <div class="flex flex-row p-2 items-center gap-1">
+                <span class="material-symbols-outlined">package_2</span>
+                <p class="text-white">+544,552</p>
+              </div>
+            </div>
+
+
+            <div class="h-[1px] bg-white/10 w-full px-2"></div>
+
+            <div class="text-center pb-2 pt-1">
+              <p class="text-xs text-sky-300 font-medium tracking-wide uppercase">Next trip:</p>
+              <p class="text-sm font-semibold text-white">August 24, 2026</p>
+            </div>
+          </div>
+
+          <button
+            class="border rounded-full w-84 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 mx-4 mt-6">
+            <a href="http://localhost:3333/chat"
+              class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] btn-pupusa text-white">Chat
+              with carrier</a>
+          </button>
+        </div>
+
+        <!-- ================= GABRIELA ================= -->
+        <div
+          class="agency-card relative flex flex-col items-center p-4 rounded-xl border border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92] transition-transform hover:scale-102 bg-[#083D8A] w-100 shadow-lg">
+          <div class=" rounded-full h-60 w-60 border  ">
+            <img class="h-full w-full rounded-full object-cover aspect-square" src="resources/assets/gabriela.png"
+              class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
+            <div class="absolute top-2 right-3 transition-transform hover:scale-120">
+              <button>
+                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
+              </button>
+            </div>
+          </div>
+          <h1 class="text-center text-white font-bold text-2xl">Gabriela</h1>
+
+          <p class="text-center text-white text-sm my-4">Dedicated to protecting your shipments every mile of the way.
+            Available space, optimized routes, and total commitment to your package's safety.</p>
+
+          <div
+            class="flex flex-col gap-2 text-white border border-white/20 rounded-xl p-3 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-80">
+
+            <div class="flex flex-row justify-between items-center w-full">
+              <div class="flex flex-col items-start pl-2 mt-2">
+                <div class="flex flex-row">
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined">star_half</span>
+                  <span class="material-symbols-outlined">star_rate</span>
+                </div>
+
+                <button
+                  class="flex items-center gap-1 text-xs text-sky-300 hover:text-white transition-colors mt-1 cursor-pointer">
+                  <span class="material-symbols-outlined text-xs">forum</span>
+                  <span>(179 reviews)</span>
+                </button>
+              </div>
+
+              <div class="flex flex-row p-2 items-center gap-1">
+                <span class="material-symbols-outlined">package_2</span>
+                <p class="text-white">+246,874</p>
+              </div>
+            </div>
+
+
+            <div class="h-[1px] bg-white/10 w-full px-2"></div>
+
+
+            <div class="text-center pb-2 pt-1">
+              <p class="text-xs text-sky-300 font-medium tracking-wide uppercase">Next trip:</p>
+              <p class="text-sm font-semibold text-white">August 30, 2026</p>
+            </div>
+          </div>
+
+          <button
+            class="border rounded-full w-84 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 mx-4 mt-6">
+            <a href="http://localhost:3333/chat"
+              class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] btn-pupusa text-white">Chat
+              with carrier</a>
+          </button>
+        </div>
+
+        <!-- ================= SOFIA ================= -->
+        <div
+          class="agency-card relative flex flex-col items-center p-4 rounded-xl border border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92] transition-transform hover:scale-102 bg-[#083D8A] w-100 shadow-lg">
+          <div class=" rounded-full h-60 w-60 border  ">
+            <img class="h-full w-full rounded-full object-cover aspect-square" src="resources/assets/sofia.png"
+              class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
+            <div class="absolute top-2 right-3 transition-transform hover:scale-120">
+              <button>
+                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
+              </button>
+            </div>
+          </div>
+          <h1 class="text-center text-white font-bold text-2xl">Sofia</h1>
+
+          <p class="text-center text-white text-sm my-4">Secure bag space available for your daily deliveries.
+            Responsible courier ready to ensure your package arrives without a hitch.</p>
+
+          <div
+            class="flex flex-col gap-2 text-white border border-white/20 rounded-xl p-3 shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-80">
+
+            <div class="flex flex-row justify-between items-center w-full">
+              <div class="flex flex-col items-start pl-2 mt-2">
+                <div class="flex flex-row">
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_rate</span>
+                  <span class="material-symbols-outlined">star_half</span>
+                </div>
+
+                <button
+                  class="flex items-center gap-1 text-xs text-sky-300 hover:text-white transition-colors mt-1 cursor-pointer">
+                  <span class="material-symbols-outlined text-xs">forum</span>
+                  <span>(449 reviews)</span>
+                </button>
+              </div>
+
+              <div class="flex flex-row p-2 items-center gap-1">
+                <span class="material-symbols-outlined">package_2</span>
+                <p class="text-white">+464,416</p>
+              </div>
+            </div>
+
+
+            <div class="h-[1px] bg-white/10 w-full px-2"></div>
+
+
+            <div class="text-center pb-2 pt-1">
+              <p class="text-xs text-sky-300 font-medium tracking-wide uppercase">Next trip:</p>
+              <p class="text-sm font-semibold text-white">May 29, 2026</p>
+            </div>
+          </div>
+
+          <button
+            class="border rounded-full w-84 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 mx-4 mt-6">
+            <a href="http://localhost:3333/chat"
+              class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] btn-pupusa text-white">Chat
+              with carrier</a>
+          </button>
         </div>
 
 
 
-        <div class="flex flex-col items-center justify-center p-12 mx-16">
-            <div class="flex flex-row flex-wrap justify-center gap-16 p-4">
-
-                <!-- original -->
-                <div class="agency-card relative flex flex-col items-center p-4 rounded-xl border border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92] transition-transform hover:scale-102 bg-[#083D8A] w-100 shadow-lg">
-                    <div class=" rounded-full h-60 w-60 border  ">
-                        <img class="h-full w-full rounded-full object-cover aspect-square"
-                            src="resources/assets/maria.png"
-                            class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
-                        <div class="absolute top-2 right-3 transition-transform hover:scale-120">
-                            <button>
-                                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
-                            </button>
-                        </div>
-                    </div>
-                    <h1 class="text-center text-white font-bold text-2xl">María</h1>
-
-                    <p class="text-center text-white text-sm my-4">Experienced logistics runner with deep knowledge of local routes. Offering secure bag space to ensure your packages are delivered safely, carefully, and right on time.</p>
-
-
-
-                    <div
-                        class="flex flex-row gap-1 justify-between items-center text-white border border-white/20 rounded-xl p- shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-80">
-                        <div class=" p-2 mt-2">
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_half
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-
-                        </div>
-
-                        <div class="flex flex-row p-2">
-                            <span class="material-symbols-outlined py-1 ">
-                                package_2
-                            </span>
-                            <p class="text-white py-1 pr-1">+125,000</p>
-                        </div>
-
-                        
-
-                        
-                    </div>
-
-                    <button
-                        class="border rounded-full w-84 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 mx-4 mt-6">
-                        <a href="http://localhost:3333/chat"
-                            class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] btn-pupusa text-white">Chat
-                            with carrier</a>
-                    </button>
-
-                </div>
-
-                <div
-                    class="agency-card relative flex flex-col items-center p-4 rounded-xl border border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92] transition-transform hover:scale-102 bg-[#083D8A] w-100 shadow-lg">
-                    <div class=" rounded-full h-60 w-60 border  ">
-                        <img class="h-full w-full rounded-full object-cover aspect-square"
-                            src="resources/assets/jose.png"
-                            class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
-                        <div class="absolute top-2 right-3 transition-transform hover:scale-120">
-                            <button>
-                                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
-                            </button>
-                        </div>
-                    </div>
-                    <h1 class="text-center text-white font-bold text-2xl">Jose</h1>
-
-                    <p class="text-center text-white text-sm my-4">Trustworthy courier with secure bag space available for your shipments. Committed to ensuring your package arrives intact, safe, and on time.</p>
-
-
-
-                    <div
-                        class="flex flex-row gap-1 justify-between items-center text-white border border-white/20 rounded-xl p- shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-80">
-                        <div class=" p-2 mt-2">
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_half
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-
-                        </div>
-
-                        <div class="flex flex-row p-2">
-                            <span class="material-symbols-outlined py-1 ">
-                                package_2
-                            </span>
-                            <p class="text-white py-1 pr-1">+170,000</p>
-                        </div>
 
-                    </div>
 
-                    <button
-                        class="border rounded-full w-84 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 mx-4 mt-6">
-                        <a href="http://localhost:3333/chat"
-                            class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] btn-pupusa text-white">Chat
-                            with carrier</a>
-                    </button>
-
-                </div>
-
- <div
-                    class="agency-card relative flex flex-col items-center p-4 rounded-xl border border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92] transition-transform hover:scale-102 bg-[#083D8A] w-100 shadow-lg">
-                    <div class=" rounded-full h-60 w-60 border  ">
-                        <img class="h-full w-full rounded-full object-cover aspect-square"
-                            src="resources/assets/lorena.png"
-                            class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
-                        <div class="absolute top-2 right-3 transition-transform hover:scale-120">
-                            <button>
-                                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
-                            </button>
-                        </div>
-                    </div>
-                    <h1 class="text-center text-white font-bold text-2xl">Lorena</h1>
-
-                    <p class="text-center text-white text-sm my-4"> I´m ready to transport your package with the same care as if it were my own. Maximizing my daily routes for safe and reliable deliveries.</p>
-
-
-
-                    <div
-                        class="flex flex-row gap-1 justify-between items-center text-white border border-white/20 rounded-xl p- shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-80">
-                        <div class=" p-2 mt-2">
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_half
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
 
-                        </div>
 
-                        <div class="flex flex-row p-2">
-                            <span class="material-symbols-outlined py-1 ">
-                                package_2
-                            </span>
-                            <p class="text-white py-1 pr-1">+148,058</p>
-                        </div>
 
-                    </div>
 
-                    <button
-                        class="border rounded-full w-84 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 mx-4 mt-6">
-                        <a href="http://localhost:3333/chat"
-                            class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] btn-pupusa text-white">Chat
-                            with carrier</a>
-                    </button>
 
-                </div>
 
 
 
@@ -238,62 +438,15 @@
 
 
 
- <div
-                    class="agency-card relative flex flex-col items-center p-4 rounded-xl border border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92] transition-transform hover:scale-102 bg-[#083D8A] w-100 shadow-lg">
-                    <div class=" rounded-full h-60 w-60 border  ">
-                        <img class="h-full w-full rounded-full object-cover aspect-square"
-                            src="resources/assets/diego.png"
-                            class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
-                        <div class="absolute top-2 right-3 transition-transform hover:scale-120">
-                            <button>
-                                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
-                            </button>
-                        </div>
-                    </div>
-                    <h1 class="text-center text-white font-bold text-2xl">Diego</h1>
 
-                    <p class="text-center text-white text-sm my-4">Responsible traveler offering secure space on my daily commutes to move your packages with full transparency, honesty, and punctuality.</p>
 
 
 
-                    <div
-                        class="flex flex-row gap-1 justify-between items-center text-white border border-white/20 rounded-xl p- shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-80">
-                        <div class=" p-2 mt-2">
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_half
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
 
-                        </div>
 
-                        <div class="flex flex-row p-2">
-                            <span class="material-symbols-outlined py-1 ">
-                                package_2
-                            </span>
-                            <p class="text-white py-1 pr-1">+494,544</p>
-                        </div>
 
-                    </div>
 
-                    <button
-                        class="border rounded-full w-84 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 mx-4 mt-6">
-                        <a href="http://localhost:3333/chat"
-                            class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] btn-pupusa text-white">Chat
-                            with carrier</a>
-                    </button>
 
-                </div>
 
 
 
@@ -303,199 +456,9 @@
 
 
 
+</div>
 
-
-
-
-
-
-
-
- <div
-                    class="agency-card relative flex flex-col items-center p-4 rounded-xl border border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92] transition-transform hover:scale-102 bg-[#083D8A] w-100 shadow-lg">
-                    <div class=" rounded-full h-60 w-60 border  ">
-                        <img class="h-full w-full rounded-full object-cover aspect-square"
-                            src="resources/assets/gabriela.png"
-                            class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
-                        <div class="absolute top-2 right-3 transition-transform hover:scale-120">
-                            <button>
-                                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
-                            </button>
-                        </div>
-                    </div>
-                    <h1 class="text-center text-white font-bold text-2xl">Gabriela</h1>
-
-                    <p class="text-center text-white text-sm my-4">Dedicated to protecting your shipments every mile of the way. Available space, optimized routes, and total commitment to your package's safety.</p>
-
-
-
-                    <div
-                        class="flex flex-row gap-1 justify-between items-center text-white border border-white/20 rounded-xl p- shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-80">
-                        <div class=" p-2 mt-2">
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_half
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-
-                        </div>
-
-                        <div class="flex flex-row p-2">
-                            <span class="material-symbols-outlined py-1 ">
-                                package_2
-                            </span>
-                            <p class="text-white py-1 pr-1">+346,982</p>
-                        </div>
-
-                    </div>
-
-                    <button
-                        class="border rounded-full w-84 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 mx-4 mt-6">
-                        <a href="http://localhost:3333/chat"
-                            class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] btn-pupusa text-white">Chat
-                            with carrier</a>
-                    </button>
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <div
-                    class="agency-card relative flex flex-col items-center p-4 rounded-xl border border-sky-600 hover:shadow-[0_0_25px_20px_#1D4D92] transition-transform hover:scale-102 bg-[#083D8A] w-100 shadow-lg">
-                    <div class=" rounded-full h-60 w-60 border  ">
-                        <img class="h-full w-full rounded-full object-cover aspect-square"
-                            src="resources/assets/sofia.png"
-                            class="h-40 w-auto mx-auto object-contain mb-4 border rounded-3xl">
-                        <div class="absolute top-2 right-3 transition-transform hover:scale-120">
-                            <button>
-                                <span class="material-symbols-outlined text-[#4182B4] cursor-pointer">favorite</span>
-                            </button>
-                        </div>
-                    </div>
-                    <h1 class="text-center text-white font-bold text-2xl">Sofia</h1>
-
-                    <p class="text-center text-white text-sm my-4">Secure bag space available for your daily deliveries. Responsible courier ready to ensure your package arrives without a hitch.</p>
-
-
-
-                    <div
-                        class="flex flex-row gap-1 justify-between items-center text-white border border-white/20 rounded-xl p- shadow-[inset_0_6px_6px_rgba(0,0,0,0.25)] w-80">
-                        <div class=" p-2 mt-2">
-                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_half
-                            </span>
-                            <span class="material-symbols-outlined">
-                                star_rate
-                            </span>
-
-                        </div>
-
-                        <div class="flex flex-row p-2">
-                            <span class="material-symbols-outlined py-1 ">
-                                package_2
-                            </span>
-                            <p class="text-white py-1 pr-1">+499,356</p>
-                        </div>
-
-                    </div>
-
-                    <button
-                        class="border rounded-full w-84 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 mx-4 mt-6">
-                        <a href="http://localhost:3333/chat"
-                            class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] btn-pupusa text-white">Chat
-                            with carrier</a>
-                    </button>
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-
-            </div>
+    </div>
   </div>
 
 
@@ -507,7 +470,7 @@
 
 
 
-            <footer
+  <footer
     class="relative z-10 flex flex-row items-center justify-around bg-gradient-to-r from-[#12254A]/70 via-[#0D4576]/30 to-[#12254A]/70">
 
     <div class="flex-shrink-0">
@@ -585,5 +548,5 @@
 
 
 
-        </div>
-        @end
+</div>
+@end
