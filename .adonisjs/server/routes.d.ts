@@ -15,6 +15,7 @@ export type ScannedRoutes = {
     'AY': { paramsTuple?: []; params?: {} }
     'ConectExpress': { paramsTuple?: []; params?: {} }
     'GlobalBox': { paramsTuple?: []; params?: {} }
+    'globalbox': { paramsTuple?: []; params?: {} }
     'Fidix': { paramsTuple?: []; params?: {} }
     'CargoRapido': { paramsTuple?: []; params?: {} }
     'Enviomundo': { paramsTuple?: []; params?: {} }
@@ -42,6 +43,7 @@ export type ScannedRoutes = {
     'AY': { paramsTuple?: []; params?: {} }
     'ConectExpress': { paramsTuple?: []; params?: {} }
     'GlobalBox': { paramsTuple?: []; params?: {} }
+    'globalbox': { paramsTuple?: []; params?: {} }
     'Fidix': { paramsTuple?: []; params?: {} }
     'CargoRapido': { paramsTuple?: []; params?: {} }
     'Enviomundo': { paramsTuple?: []; params?: {} }
@@ -66,6 +68,7 @@ export type ScannedRoutes = {
     'AY': { paramsTuple?: []; params?: {} }
     'ConectExpress': { paramsTuple?: []; params?: {} }
     'GlobalBox': { paramsTuple?: []; params?: {} }
+    'globalbox': { paramsTuple?: []; params?: {} }
     'Fidix': { paramsTuple?: []; params?: {} }
     'CargoRapido': { paramsTuple?: []; params?: {} }
     'Enviomundo': { paramsTuple?: []; params?: {} }

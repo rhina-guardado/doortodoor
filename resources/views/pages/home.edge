@@ -1,15 +1,6 @@
 @layout()
 
 <style>
-
-  #avion {
-    position: fixed;
-    z-index: 5;
-    pointer-events: none;
-    width: 80px;
-    filter: drop-shadow(0 0 8px rgba(65, 130, 180, 0.6));
-  }
-
   .cajita {
     position: fixed;
     z-index: 4;
@@ -26,7 +17,7 @@
       #DFEEF3 52%,
       #ffffff 65%,
       #ffffff 100%);
-    background-size: 250% auto;
+    background-size: 100% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -42,77 +33,17 @@
     border-radius: 999px;
   }
 
-
-  .scroll-indicator {
-    position: absolute;
-    bottom: 32px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    opacity: 0;
-  }
-
-  .scroll-indicator span {
-    font-size: 0.7rem;
-    color: rgba(255,255,255,0.5);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-  }
-
-  .scroll-arrow {
-    width: 20px;
-    height: 20px;
-    border-right: 2px solid rgba(255,255,255,0.4);
-    border-bottom: 2px solid rgba(255,255,255,0.4);
-    transform: rotate(45deg);
-    animation: scrollBounce 1.5s infinite;
-  }
-
   @keyframes scrollBounce {
     0%, 100% { transform: rotate(45deg) translateY(0); opacity: 0.4; }
     50% { transform: rotate(45deg) translateY(6px); opacity: 1; }
   }
 
-
-  .estela {
-    position: fixed;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(65, 130, 180, 0.4));
-    pointer-events: none;
-    z-index: 4;
-    border-radius: 999px;
-  }
 </style>
-
-<div id="avion">
-  <svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
-    <!-- Cuerpo principal -->
-    <ellipse cx="50" cy="32" rx="38" ry="10" fill="#DFEEF3" opacity="0.95"/>
-    <!-- Nariz -->
-    <path d="M88 32 Q100 32 88 28 L88 36 Z" fill="#4182b4"/>
-    <!-- Cola -->
-    <path d="M12 32 Q5 20 18 22 L22 30 Z" fill="#4182b4"/>
-    <path d="M12 32 Q5 44 18 42 L22 34 Z" fill="#2467A2"/>
-    <!-- Ala superior -->
-    <path d="M55 28 Q65 10 80 14 L75 28 Z" fill="#4182b4" opacity="0.9"/>
-    <!-- Ventanitas -->
-    <circle cx="65" cy="30" r="3" fill="#12254A" opacity="0.6"/>
-    <circle cx="55" cy="30" r="3" fill="#12254A" opacity="0.6"/>
-    <circle cx="75" cy="30" r="3" fill="#12254A" opacity="0.6"/>
-    <!-- Línea de fuselaje -->
-    <line x1="15" y1="32" x2="88" y2="32" stroke="#4182b4" stroke-width="0.5" opacity="0.3"/>
-  </svg>
-</div>
 
 <div class="relative bg-[#12254A] min-h-screen w-full overflow-x-hidden">
   <video autoplay loop muted src="/resources/assets/video2background.mp4"
     class="fixed top-0 left-0 w-full h-full object-cover z-0">
   </video>
-
-  <div class="fixed inset-0 z-[1] bg-[#12254A]/20 pointer-events-none"></div>
 
   <nav class="absolute left-0 w-full z-50 flex justify-between items-center px-8 py-6 bg-transparent">
     <a href="/" class="flex items-center">
@@ -138,7 +69,7 @@
     </div>
   </nav>
 
-  <main class="relative z-10 flex flex-col items-center justify-center h-screen text-white px-4 text-center">
+  <main class="relative z-10 flex flex-col items-center justify-center h-screen text-white text-center">
 
     <h1 id="landing-titulo" class="landing-titulo font-bold text-5xl md:text-5xl drop-shadow-2xl mb-6 max-w-4xl leading-tight">
       El Salvador is knocking your door
@@ -150,11 +81,23 @@
       Making every delivery feel <span class="font-bold text-[#4182b4]">personal</span>
     </p>
 
-    <div class="scroll-indicator" id="scroll-indicator">
-      <span>Scroll</span>
-      <div class="scroll-arrow"></div>
-    </div>
+ <div class="flex">
+<a href="/log_in"
+              class="flex items-center justify-center border rounded-full w-42 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:bg-gradient-to-r hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 m-4 no-underline">
 
+              <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] text-white">
+                Log in
+              </p>
+            </a>
+
+<a href="/register"
+              class="flex items-center justify-center border rounded-full w-42 h-10 bg-gradient-to-r from-[#4182B4] via-[#2467A2] to-[#0D4576] cursor-pointer hover:bg-gradient-to-r hover:from-[#2467A2] hover:via-[#4182B4] hover:to-[#2467A2] transition-all duration-300 m-4 no-underline">
+
+              <p class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_2px_#fff] text-white">
+                Register
+              </p>
+            </a>
+            </div>
   </main>
 
 </div>

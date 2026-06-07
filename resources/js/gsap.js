@@ -250,52 +250,9 @@ if (document.getElementById("landing-titulo")) {
     delay: 2
   })
 
-  // Scroll indicator
-  gsap.to("#scroll-indicator", {
-    opacity: 1,
-    duration: 1,
-    delay: 2.8,
-    ease: "power2.out"
-  })
 
-  // Avioncito
-  const avion = document.getElementById("avion")
   const emojisAvion = ["📦", "📦", "📫", "📬", "🎁"]
 
-  function volarAvion() {
-    const startY = Math.random() * (window.innerHeight * 0.6) + window.innerHeight * 0.1
-
-    gsap.set(avion, { x: -120, y: startY, opacity: 0 })
-
-    const estela = document.createElement("div")
-    estela.className = "estela"
-    estela.style.cssText = `
-      position: fixed;
-      top: ${startY + 15}px;
-      left: -120px;
-      width: 0px;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(65,130,180,0.4));
-      pointer-events: none;
-      z-index: 4;
-      border-radius: 999px;
-    `
-    document.body.appendChild(estela)
-
-    const tl = gsap.timeline({
-      onComplete: () => {
-        estela.remove()
-        setTimeout(volarAvion, Math.random() * 6000 + 6000)
-      }
-    })
-
-    tl.to(avion, { opacity: 0.9, duration: 0.5 })
-      .to(avion, { x: window.innerWidth + 150, y: startY + (Math.random() - 0.5) * 80, duration: 7, ease: "none" }, "<")
-      .to(estela, { width: window.innerWidth + 150, duration: 7, ease: "none" }, "<")
-      .to(avion, { opacity: 0, duration: 0.5 }, "-=0.5")
-  }
-
-  setTimeout(volarAvion, 2500)
 
   // Cajitas cayendo
   function crearCajita() {
