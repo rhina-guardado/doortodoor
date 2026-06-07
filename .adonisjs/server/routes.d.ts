@@ -14,6 +14,7 @@ export type ScannedRoutes = {
     'profile': { paramsTuple?: []; params?: {} }
     'AY': { paramsTuple?: []; params?: {} }
     'ConectExpress': { paramsTuple?: []; params?: {} }
+    'ConnectExpress': { paramsTuple?: []; params?: {} }
     'GlobalBox': { paramsTuple?: []; params?: {} }
     'globalbox': { paramsTuple?: []; params?: {} }
     'Fidix': { paramsTuple?: []; params?: {} }
@@ -42,6 +43,7 @@ export type ScannedRoutes = {
     'profile': { paramsTuple?: []; params?: {} }
     'AY': { paramsTuple?: []; params?: {} }
     'ConectExpress': { paramsTuple?: []; params?: {} }
+    'ConnectExpress': { paramsTuple?: []; params?: {} }
     'GlobalBox': { paramsTuple?: []; params?: {} }
     'globalbox': { paramsTuple?: []; params?: {} }
     'Fidix': { paramsTuple?: []; params?: {} }
@@ -67,6 +69,7 @@ export type ScannedRoutes = {
     'profile': { paramsTuple?: []; params?: {} }
     'AY': { paramsTuple?: []; params?: {} }
     'ConectExpress': { paramsTuple?: []; params?: {} }
+    'ConnectExpress': { paramsTuple?: []; params?: {} }
     'GlobalBox': { paramsTuple?: []; params?: {} }
     'globalbox': { paramsTuple?: []; params?: {} }
     'Fidix': { paramsTuple?: []; params?: {} }

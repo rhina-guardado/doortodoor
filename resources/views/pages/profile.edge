@@ -1,137 +1,262 @@
 @layout()
 
-@!navbar()
 
+<style>
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
 
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+  @keyframes spin-border {
+    to { --angle: 360deg; }
+  }
 
-    <div class="flex flex-col justify-center items-center pt-30 lg:pt-35">
-        <div class="
-        flex justify-center items-center rounded-full bg-blue-400/30
+  .profile-ring {
+    animation: spin-border 5s linear infinite;
+    background: conic-gradient(from var(--angle),
+      #12254A, #4182b4, #DFEEF3, #2467A2, #4182b4, #12254A
+    );
+    padding: 3px;
+    border-radius: 50%;
+  }
 
-        w-[250px] h-[250px]
-        sm:w-[240px] sm:h-[240px]
-        md:w-[320px] md:h-[320px]
-        lg:w-[500px] lg:h-[500px]
-    ">
-            <img src="/resources/assets/aiclient.png" class="
-                rounded-full object-cover border border-white/50 shadow-xl/30 shadow-white
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 30px 5px rgba(65, 130, 180, 0.3); }
+    50% { box-shadow: 0 0 70px 20px rgba(65, 130, 180, 0.7); }
+  }
 
-                w-[200px] h-[200px]
-                sm:w-[160px] sm:h-[160px]
-                md:w-[220px] md:h-[220px]
-                lg:w-[350px] lg:h-[350px]
-            ">
-        </div>
+  .profile-glow {
+    animation: glow-pulse 3s ease-in-out infinite;
+    border-radius: 50%;
+  }
 
+  .profile-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(65, 130, 180, 0.2);
+    border-radius: 28px;
+  }
 
+  .stat-chip {
+    background: rgba(65, 130, 180, 0.1);
+    border: 1px solid rgba(65, 130, 180, 0.25);
+    border-radius: 12px;
+    padding: 10px 16px;
+    transition: all 0.2s ease;
+  }
 
-        <div class="flex items-center pt-4">
-            <div class="flex items-center space-x-1">
-                <svg class="w-5 h-5 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
-                <svg class="w-5 h-5 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
-                <svg class="w-5 h-5 text-fg-disabled" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"
-                    height="24" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
-                </svg>
+  .stat-chip:hover {
+    background: rgba(65, 130, 180, 0.2);
+    border-color: rgba(65, 130, 180, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .info-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 10px 0;
+  }
+
+  .info-row:last-child { border-bottom: none; }
+
+  .edit-btn {
+    background: linear-gradient(135deg, #2467A2, #0D4576);
+    border: 1px solid rgba(65, 130, 180, 0.4);
+    border-radius: 14px;
+    padding: 10px 24px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+
+  .edit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(36, 103, 162, 0.4);
+    background: linear-gradient(135deg, #4182b4, #2467A2);
+  }
+
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+
+  .back-btn:hover { color: #4182b4; }
+
+  .username-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(65, 130, 180, 0.15);
+    border: 1px solid rgba(65, 130, 180, 0.3);
+    border-radius: 999px;
+    padding: 3px 12px;
+    font-size: 0.8rem;
+    color: #4182b4;
+    font-weight: 600;
+  }
+
+  .star-filled { color: #FBBF24; }
+  .star-empty { color: rgba(255,255,255,0.2); }
+</style>
+
+<nav
+    class="absolute left-0 w-full z-50 flex justify-between items-center px-8 py-6 bg-gradient-to-r from-[#12254A]/20 via-[#0D4576]/20 to-[#12254A]/20">
+
+    <a href="/welcome" class="flex items-center">
+      <img src="resources\assets\solo_to.png" alt="Logo doortodoor"
+        class="h-18 w-auto object-contain hover:scale-105 transition-duration-400">
+    </a>
+
+    <div class="relative group">
+      <button
+        class="flex items-center gap-2 text-white bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all active:scale-95">
+        <span class="font-medium">Menu</span>
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <div
+        class="absolute right-0 mt-3 w-56 bg-white rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60] overflow-hidden py-2 border border-white/20">
+        <a href="profile"
+          class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Your
+          profile</a>
+        <a href="todavia no esta"
+          class="block px-4 py-2.5 text-sm text-slate-800 hover:bg-[#12254A] hover:text-white transition-colors">Settings</a>
+        <div class="h-[1px] bg-slate-200 my-1"></div>
+        <a href="tampoco se puede"
+          class="block px-4 py-2.5 text-sm text-red-600 hover:bg-red-500  hover:text-white transition-colors">Sign
+          out</a>
+      </div>
+    </div>
+  </nav>
+
+<div class="relative min-h-screen w-full overflow-x-hidden">
+  <video autoplay loop muted src="/resources/assets/video2background.mp4"
+    class="fixed inset-0 w-full h-full object-cover -z-10">
+  </video>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 py-8 flex flex-col items-center">
+     
+    <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center min-h-[80vh]">
+
+      <!-- FOTO -->
+      <div class="flex flex-col items-center gap-6">
+        <div class="profile-glow">
+          <div class="profile-ring">
+            <div class="rounded-full bg-[#0a0f1e] p-1">
+              <img
+                src="/resources\assets\aicliente.png"
+                alt="Profile photo"
+                class="rounded-full object-cover w-[200px] h-[200px] sm:w-[220px] sm:h-[220px] md:w-[260px] md:h-[260px] lg:w-[320px] lg:h-[320px]"
+              >
             </div>
-            <p class="ms-2 text-sm font-medium text-body">4.95 out of 5</p>
+          </div>
         </div>
+
+        <!-- Rating -->
+        <div class="flex flex-col items-center gap-2">
+          <div class="flex items-center gap-1">
+            <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 24 24"><path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/></svg>
+            <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 24 24"><path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/></svg>
+            <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 24 24"><path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/></svg>
+            <svg class="w-5 h-5 star-filled" fill="currentColor" viewBox="0 0 24 24"><path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/></svg>
+            <svg class="w-5 h-5 star-empty" fill="currentColor" viewBox="0 0 24 24"><path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"/></svg>
+          </div>
+          <p class="text-sm text-white/50">4.95 out of 5</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="flex gap-3 flex-wrap justify-center">
+          <div class="stat-chip text-center">
+            <p class="text-white font-bold text-xl">12</p>
+            <p class="text-white/50 text-xs">Shipments</p>
+          </div>
+          <div class="stat-chip text-center">
+            <p class="text-white font-bold text-xl">2023</p>
+            <p class="text-white/50 text-xs">Member since</p>
+          </div>
+          <div class="stat-chip text-center">
+            <p class="text-white font-bold text-xl">3</p>
+            <p class="text-white/50 text-xs">Agencies</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-2">
+          <p class="text-white/40 text-sm uppercase tracking-widest font-medium">Your profile</p>
+          <h1 class="text-white text-4xl lg:text-5xl font-bold leading-tight">
+            Hello, <span style="color:#4182b4">Sandra</span> 👋
+          </h1>
+          <div class="username-tag">@Sandrita08</div>
+        </div>
+
+        <div class="profile-card p-6 flex flex-col gap-4">
+          <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+            <p class="text-white/40 text-xs uppercase tracking-widest mb-2">About me</p>
+            <p class="text-white/80 text-sm leading-relaxed">Salvadoreña en USA, q extraña las quesadillas 🫓</p>
+          </div>
+
+          <div class="flex flex-col">
+            <div class="info-row flex items-center gap-3">
+              <svg class="w-4 h-4 text-[#4182b4] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <div>
+                <p class="text-white/40 text-xs">Location</p>
+                <p class="text-white text-sm font-medium">Houston, Texas</p>
+              </div>
+            </div>
+
+            <div class="info-row flex items-center gap-3">
+              <svg class="w-4 h-4 text-[#4182b4] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <div>
+                <p class="text-white/40 text-xs">Phone</p>
+                <p class="text-white text-sm font-medium">+000 0000-0000</p>
+              </div>
+            </div>
+
+            <div class="info-row flex items-center gap-3">
+              <svg class="w-4 h-4 text-[#4182b4] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <div>
+                <p class="text-white/40 text-xs">Email</p>
+                <p class="text-white text-sm font-medium">Sandra08mendez@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-end mt-2">
+            <button class="edit-btn">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+              </svg>
+              Edit Profile
+            </button>
+          </div>
+        </div>
+      </div>
 
     </div>
-
-    <div class="lg:col-start-2 flex justify-center items-center pt-10 lg:pt-35 grid">
-        <h1
-            class="text-center text-4xl sm:text-5xl m:text-6xl font-bold font-header text-shadow-lg/30 text-shadow-[#4182b4]">
-            Hello there!</h1>
-        <h2 class="text-center text-2xl font-bold font-header text-shadow-lg/30 text-shadow-[#4182b4] pb-4">This is your
-            profile</h2>
-
-        <div class="py-5 px-10 rounded-4xl bg-white/5 backdrop-filter backdrop-blur-xl bg-opacity-40 grid gap-2">
-            <h3 class="text-xl font-bold font-header"> Sandra Guadalupe Mendez</h3>
-            <p class="font-bold text-fg-brand font-medium text-blue-600/100 dark:text-sky-400/100">@Sandrita08</p>
-
-            <div class="mt-2 mb-2 flex items-center gap-4 text-white/90">
-
-                <div class="flex items-center gap-2">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-
-                        <path
-                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
-                        <circle cx="12" cy="10" r="3" />
-
-                    </svg>
-
-                    <p>Houston, Texas</p>
-
-                </div>
-
-                <div class="flex items-center gap-2">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-
-                        <path d="M8 2v4" />
-                        <path d="M16 2v4" />
-                        <rect width="18" height="18" x="3" y="4" rx="2" />
-                        <path d="M3 10h18" />
-
-                    </svg>
-
-                    <p>Joined in 2023</p>
-
-                </div>
-
-            </div>
-            <div class="py-4 px-5 rounded-xl bg-white/5 backdrop-filter backdrop-blur-xl bg-opacity-40 grid gap-1">
-                <div class="border border-white/15 py-4 px-4 rounded-xl">
-                    <h1 class="font-bold text-l">About me</h1>
-                    <p>Salvadoreña en USA, q extraña las quesadillas</p>
-                </div>
-                <h1 class="font-bold">Phone number</h1>
-                <p class="border-b-1 border-white/50">+000 0000-0000</p>
-                <h1 class="font-bold">Gmail</h1>
-                <p class="border-b-1 border-white/50">@Sandra08mendez@gmail.com</p>
-            </div>
-
-            <div class="flex justify-center mt-6">
-                <button
-                    class="cursor-pointer bg-[#2467A2] rounded-xl border-1 border-white/50 p-2 px-4 text-lg flex items-center gap-2 text-base"><svg
-                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-pencil-icon lucide-pencil">
-                        <path
-                            d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
-                        <path d="m15 5 4 4" />
-                    </svg>Edit Profile</button>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-
+  </div>
 </div>
 
 @end

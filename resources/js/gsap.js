@@ -397,3 +397,31 @@ if (exists("footer")) {
     }
   });
 }
+
+
+if (document.getElementById("perfil-ring")) {
+  gsap.to("#perfil-ring", {
+    rotation: 360,
+    duration: 6,
+    ease: "none",
+    repeat: -1
+  })
+
+
+  gsap.to("#perfil-glow", {
+    boxShadow: "0 0 70px 20px rgba(65, 130, 180, 0.7)",
+    duration: 2,
+    ease: "power1.inOut",
+    repeat: -1,
+    yoyo: true
+  })
+
+  
+  gsap.from("img[src*='aiclient']", {
+    duration: 1,
+    scale: 0.5,
+    opacity: 0,
+    ease: "back.out(2)",
+    delay: 0.3
+  })
+}
