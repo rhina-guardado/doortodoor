@@ -1,14 +1,13 @@
 @layout()
 
 <div class="relative bg-[#12254A] min-h-screen w-full overflow-y-auto">
-  <video autoplay loop muted src="/resources/assets/video2background.mp4"
-    class="fixed inset-0 w-full h-full object-cover z-0">
+  <video autoplay loop muted src="/images/video2background.mp4" class="fixed inset-0 w-full h-full object-cover z-0">
   </video>
 
   <nav class="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-6 bg-transparent">
 
     <a href="/welcome" class="flex items-center">
-      <img src="resources\assets\solo_to.png" alt="Logo doortodoor"
+      <img src="/images/solo_to.png" alt="Logo doortodoor"
         class="h-18 w-auto object-contain hover:scale-105 transition-duration-400">
     </a>
 
@@ -44,19 +43,19 @@
       <div class="space-y-12 flex flex-col items-start">
 
         <a href="javascript:history.back()"
-        class="flex items-center gap-2 text-white hover:text-[#4182b4] transition-colors duration-200 cursor-pointer">
-        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
-        <span>Back</span>
-      </a>
+          class="flex items-center gap-2 text-white hover:text-[#4182b4] transition-colors duration-200 cursor-pointer">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          <span>Back</span>
+        </a>
 
 
         <div class="space-y-4 agency-card">
           <h2 class="text-3xl font-bold">Location</h2>
           <p class="text-gray-300 text-sm leading-relaxed">
-            They are located in Colonia Loma Linda, end of Avenida Independencia Sur and By Pass,
-            Santa Ana, with customer service available 24/7.
+            They are located in Colonia Loma Linda, end of Avenida Independencia Sur and By Pass,
+            Santa Ana, with customer service available 24/7.
           </p>
         </div>
 
@@ -72,7 +71,7 @@
         <div class="space-y-4 agency-card">
           <h2 class="text-3xl font-bold">Coverage</h2>
           <p class="text-gray-300 text-sm leading-relaxed">
-            They operate throughout El Salvador and offer door-to-door deliveries to the United States.
+            They operate throughout El Salvador and offer door-to-door deliveries to the United States.
             They also bring online purchases from the U.S. and worldwide to El Salvador.
           </p>
         </div>
@@ -97,12 +96,14 @@
 
             <div
               class="relative overflow-hidden rounded-[2rem] border border-blue-400/30 w-80resources/views/pages/ConectExpress.edge h-48 flex items-center justify-center bg-[#4a2418]">
-              <img src="resources\assets\enviomundo.png" alt="Enviomundo" class="w-full h-full object-cover">
+              <img src="/images/enviomundo.png" alt="Enviomundo" class="w-full h-full object-cover">
             </div>
           </div>
         </div>
 
-        <h1 class="text-5xl font-black mb-8 tracking-tighter titulo-principal  text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] text-3xl font-semibold pointer-events-none ">EnvíoMundo</h1>
+        <h1
+          class="text-5xl font-black mb-8 tracking-tighter titulo-principal  text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] text-3xl font-semibold pointer-events-none ">
+          EnvíoMundo</h1>
 
 
         <div class="flex gap-12 mb-12">
@@ -112,47 +113,53 @@
               Chat
             </button>
           </a>
-          <a href="track">
-            <button
-              class="px-10 py-1 bg-[#1d3557] rounded-full bg-gradient-to-r from-[#0D4576] to-[#4182B4] hover:from-[#4182B4] hover:to-[#0D4576] transition-all duration-300 active:scale-95"">Track</button>
+          <a href=" track">
+              <button
+                class="px-10 py-1 bg-[#1d3557] rounded-full bg-gradient-to-r from-[#0D4576] to-[#4182B4] hover:from-[#4182B4] hover:to-[#0D4576] transition-all duration-300 active:scale-95"">Track</button>
           </a>
         </div>
 
 
-        <div class="relative w-full pl-8 border-l-2 border-gray-600 space-y-10">
+        <div class=" relative w-full pl-8 border-l-2 border-gray-600 space-y-10">
 
 
-          <div class="relative agency-card">
-            <div class="absolute -left-[41px] top-1 w-4 h-4 bg-purple-600 rounded-full border-4 border-[#0a192f]"></div>
-            <h3 class="text-2xl font-bold mb-2">Services</h3>
-            <p class="text-gray-300 text-sm">They offer door-to-door shipping from El Salvador to
-              the United States, Mexico, and Canada, specializing in the fast transport of documents,
-              medications, and general parcels, with delivery in 3 to 5 business days. They also facilitate
-              online purchases from the U.S. and their import to El Salvador, offering free pickup
-              throughout the country and continuous tracking services.</p>
-          </div>
+                <div class="relative agency-card">
+                  <div class="absolute -left-[41px] top-1 w-4 h-4 bg-purple-600 rounded-full border-4 border-[#0a192f]">
+                  </div>
+                  <h3 class="text-2xl font-bold mb-2">Services</h3>
+                  <p class="text-gray-300 text-sm">They offer door-to-door shipping from El Salvador to
+                    the United States, Mexico, and Canada, specializing in the fast transport of documents,
+                    medications, and general parcels, with delivery in 3 to 5 business days. They also facilitate
+                    online purchases from the U.S. and their import to El Salvador, offering free pickup
+                    throughout the country and continuous tracking services.</p>
+                </div>
 
 
-          <div class="relative agency-card">
-            <div class="absolute -left-[41px] top-1 w-4 h-4 bg-purple-600 rounded-full border-4 border-[#0a192f]"></div>
-            <h3 class="text-2xl font-bold mb-2">Schedule</h3>
-            <p class="text-gray-300 text-sm">Monday to Friday: 8:00 a.m. - 6:00 p.m.<br>Saturday: 9:00 a.m. - 12:00
-              p.m.<br>Sunday: Closed</p>
-          </div>
+                <div class="relative agency-card">
+                  <div class="absolute -left-[41px] top-1 w-4 h-4 bg-purple-600 rounded-full border-4 border-[#0a192f]">
+                  </div>
+                  <h3 class="text-2xl font-bold mb-2">Schedule</h3>
+                  <p class="text-gray-300 text-sm">Monday to Friday: 8:00 a.m. - 6:00 p.m.<br>Saturday: 9:00 a.m. -
+                    12:00
+                    p.m.<br>Sunday: Closed</p>
+                </div>
 
 
-          <div class="relative agency-card">
-            <div class="absolute -left-[41px] top-1 w-4 h-4 bg-purple-600 rounded-full border-4 border-[#0a192f]"></div>
-            <h3 class="text-2xl font-bold mb-2">Phone</h3>
-            <p class="text-gray-300 text-sm">(+503)  7856-2340</p>
-            <p class="text-gray-300 text-sm">(+503) 2434-3929</p>
-          </div>
+                <div class="relative agency-card">
+                  <div class="absolute -left-[41px] top-1 w-4 h-4 bg-purple-600 rounded-full border-4 border-[#0a192f]">
+                  </div>
+                  <h3 class="text-2xl font-bold mb-2">Phone</h3>
+                  <p class="text-gray-300 text-sm">(+503) 7856-2340</p>
+                  <p class="text-gray-300 text-sm">(+503) 2434-3929</p>
+                </div>
 
-          <div class="relative agency-card">
-            <div class="absolute -left-[41px] top-1 w-4 h-4 bg-purple-600 rounded-full border-4 border-[#0a192f]"></div>
-            <h3 class="text-2xl font-bold mb-2">Website</h3>
-            <a href="#" class="text-blue-400 text-xs underline break-all">https://business.google.com/v/_/07935391928891327818/69d2/_</a>
-          </div>
+                <div class="relative agency-card">
+                  <div class="absolute -left-[41px] top-1 w-4 h-4 bg-purple-600 rounded-full border-4 border-[#0a192f]">
+                  </div>
+                  <h3 class="text-2xl font-bold mb-2">Website</h3>
+                  <a href="#"
+                    class="text-blue-400 text-xs underline break-all">https://business.google.com/v/_/07935391928891327818/69d2/_</a>
+                </div>
         </div>
       </div>
     </div>
@@ -232,32 +239,32 @@
 
 
   <footer
-  class="relative z-10 flex flex-row items-center justify-around bg-gradient-to-r from-[#12254A]/70 via-[#0D4576]/30 to-[#12254A]/70">
+    class="relative z-10 flex flex-row items-center justify-around bg-gradient-to-r from-[#12254A]/70 via-[#0D4576]/30 to-[#12254A]/70">
 
-  <div class="flex-shrink-0">
-    <img src="resources/assets/solo_to.png"
-      class="h-48 w-48 rounded-full  my-6 object-cover shadow-[0_10px_10px_0_rgba(0,0,0,0.3)]">
-  </div>
-
-  <div class="flex flex-row items-start gap-16 p-2">
-
-
-    <div class="flex flex-col items-center gap-3">
-      <p class="pb-4 font-bold text-lg text-white text-shadow-lg/20">Our Team</p>
-      <div class="flex flex-col items-center gap-2 text-white">
-        <a href="about_us.com" target="_blank"
-          class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">About Us</a>
-        <a href="privacy_policy.com" target="_blank"
-          class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">Privacy Policy</a>
-        <a href="contact_us.com" target="_blank"
-          class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">Contact Us</a>
-      </div>
+    <div class="flex-shrink-0">
+      <img src="/images/solo_to.png"
+        class="h-48 w-48 rounded-full  my-6 object-cover shadow-[0_10px_10px_0_rgba(0,0,0,0.3)]">
     </div>
 
+    <div class="flex flex-row items-start gap-16 p-2">
 
-    <div class="flex flex-col items-center gap-3">
-      <p class="pb-4 font-bold text-lg text-white text-shadow-lg/20 ">Agencias</p>
-      <div class="flex flex-row gap-10 text-white">
+
+      <div class="flex flex-col items-center gap-3">
+        <p class="pb-4 font-bold text-lg text-white text-shadow-lg/20">Our Team</p>
+        <div class="flex flex-col items-center gap-2 text-white">
+          <a href="about_us.com" target="_blank"
+            class="drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">About Us</a>
+          <a href="privacy_policy.com" target="_blank"
+            class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">Privacy Policy</a>
+          <a href="contact_us.com" target="_blank"
+            class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">Contact Us</a>
+        </div>
+      </div>
+
+
+      <div class="flex flex-col items-center gap-3">
+        <p class="pb-4 font-bold text-lg text-white text-shadow-lg/20 ">Agencias</p>
+        <div class="flex flex-row gap-10 text-white">
           <div class="flex flex-col text-center gap-2">
             <a href="Fidix" target="_blank"
               class=" drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] hover:underline hover:text-white">FIDIX</a>
@@ -276,26 +283,26 @@
               Express</a>
           </div>
         </div>
-    </div>
-
-
-    <div class="flex flex-col items-center gap-3">
-      <p class="pb-4 font-bold text-lg text-white text-shadow-lg/20">Follow Us</p>
-      <div class="flex flex-row gap-4">
-        <a href="facebook.com" target="_blank" class="transition-transform hover:scale-110">
-          <img src="resources/assets/facebook.png" class="h-10 w-10">
-        </a>
-        <a href="instagram.com" target="_blank" class="transition-transform hover:scale-110">
-          <img src="resources/assets/insta.png" class="h-10 w-10">
-        </a>
-        <a href="twitter.com" target="_blank" class="transition-transform hover:scale-110">
-          <img src="resources/assets/twitter.png" class="h-10 w-10">
-        </a>
       </div>
+
+
+      <div class="flex flex-col items-center gap-3">
+        <p class="pb-4 font-bold text-lg text-white text-shadow-lg/20">Follow Us</p>
+        <div class="flex flex-row gap-4">
+          <a href="facebook.com" target="_blank" class="transition-transform hover:scale-110">
+            <img src="/images/facebook.png" class="h-10 w-10">
+          </a>
+          <a href="instagram.com" target="_blank" class="transition-transform hover:scale-110">
+            <img src="/images/insta.png" class="h-10 w-10">
+          </a>
+          <a href="twitter.com" target="_blank" class="transition-transform hover:scale-110">
+            <img src="/images/twitter.png" class="h-10 w-10">
+          </a>
+        </div>
+      </div>
+
     </div>
-
-  </div>
-</footer>
+  </footer>
 
 
-  @end
+@end
